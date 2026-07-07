@@ -6,7 +6,7 @@
 
 <title>Wolf Creek Farms | Land Clearing, Road Building & Land Management</title>
 
-<meta name="description" content="Wolf Creek Farms provides land clearing, land preparation, road building, drainage, house pads, RV lots, pond building, demolition, hunting land development, fire breaks, clay gravel, and land management services.">
+<meta name="description" content="Wolf Creek Farms provides land clearing, land preparation, road building, drainage, house pads, RV lots, pond building, demolition, hunting land development, fire breaks, clay gravel, and land management services across East Central Alabama.">
 
 <style>
 :root{
@@ -20,12 +20,19 @@
 --soft:#d7ded2;
 --muted:#aeb8aa;
 --accent:#91aa6d;
---line:rgba(255,255,255,.12);
+--line:rgba(255,255,255,.14);
 --shadow:0 22px 60px rgba(0,0,0,.34);
 }
 
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
@@ -34,8 +41,15 @@ color:var(--white);
 line-height:1.6;
 }
 
-a{text-decoration:none;color:inherit;}
-img{display:block;max-width:100%;}
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+display:block;
+max-width:100%;
+}
 
 .container{
 width:min(1180px,92%);
@@ -71,7 +85,7 @@ color:var(--charcoal);
 .btn-ghost{
 border-color:var(--line);
 color:white;
-background:rgba(255,255,255,.06);
+background:rgba(255,255,255,.08);
 }
 
 header{
@@ -80,7 +94,7 @@ top:0;
 left:0;
 width:100%;
 z-index:1000;
-background:rgba(16,20,19,.82);
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
 backdrop-filter:blur(12px);
 border-bottom:1px solid var(--line);
 }
@@ -90,11 +104,19 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 gap:22px;
-padding:14px 0;
+padding:12px 0;
+}
+
+.logo{
+background:rgba(255,255,255,.08);
+padding:6px 12px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,.14);
 }
 
 .logo img{
-height:70px;
+height:72px;
+filter:drop-shadow(0 3px 10px rgba(0,0,0,.45));
 }
 
 .nav-links{
@@ -130,7 +152,7 @@ text-align:right;
 display:block;
 font-size:12px;
 font-weight:700;
-color:var(--muted);
+color:var(--soft);
 }
 
 .hero{
@@ -139,12 +161,12 @@ display:flex;
 align-items:end;
 position:relative;
 background:
-linear-gradient(90deg,rgba(16,20,19,.92),rgba(16,20,19,.55),rgba(16,20,19,.16)),
+linear-gradient(90deg,rgba(16,20,19,.92),rgba(16,20,19,.58),rgba(16,20,19,.16)),
 linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 34%),
 url("assets/equipment/wolf-creek-hero-excavator.jpg");
 background-size:cover;
 background-position:center;
-padding:150px 0 70px;
+padding:155px 0 72px;
 }
 
 .hero-wrap{
@@ -186,7 +208,7 @@ flex-wrap:wrap;
 }
 
 .form-card{
-background:rgba(18,24,21,.92);
+background:rgba(18,24,21,.93);
 border:1px solid var(--line);
 box-shadow:var(--shadow);
 border-radius:28px;
@@ -304,7 +326,7 @@ display:grid;
 grid-template-columns:1.05fr .95fr;
 gap:34px;
 align-items:center;
-margin-bottom:34px;
+margin-bottom:40px;
 }
 
 .feature:nth-child(even){
@@ -458,6 +480,20 @@ padding:34px;
 box-shadow:var(--shadow);
 }
 
+.area-card h2{
+font-size:clamp(38px,4vw,62px);
+line-height:.98;
+letter-spacing:-1.5px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.area-card p{
+color:var(--soft);
+font-size:19px;
+margin-bottom:28px;
+}
+
 .pills{
 display:flex;
 gap:12px;
@@ -507,15 +543,24 @@ margin:0 auto 28px;
 }
 
 footer{
-background:#090c0b;
+background:linear-gradient(135deg,#203b2d,#101413);
 padding:70px 0;
 text-align:center;
 border-top:1px solid var(--line);
 }
 
-footer img{
+.footer-logo-box{
+display:inline-flex;
+background:rgba(255,255,255,.08);
+padding:18px 26px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.14);
+margin-bottom:24px;
+}
+
+.footer-logo-box img{
 max-width:290px;
-margin:0 auto 24px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.45));
 }
 
 .footer-links{
@@ -617,6 +662,10 @@ padding:64px 0;
 .logo img{
 height:62px;
 }
+
+.footer-logo-box img{
+max-width:240px;
+}
 }
 </style>
 </head>
@@ -640,7 +689,7 @@ height:62px;
 
 <div class="nav-actions">
 <div class="phone">
-334-XXX-XXXX
+334-207-3331
 <small>Call or Text for Estimates</small>
 </div>
 <a href="#estimate" class="btn btn-primary">Free Estimate</a>
@@ -663,7 +712,7 @@ Wolf Creek Farms helps landowners clear, shape, drain, build, and improve proper
 
 <div class="hero-buttons">
 <a href="#estimate" class="btn btn-secondary">Request a Free Estimate</a>
-<a href="tel:334XXXXXXX" class="btn btn-primary">Call Now</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Now</a>
 <a href="#projects" class="btn btn-ghost">View Work</a>
 </div>
 </div>
@@ -748,13 +797,13 @@ Wolf Creek Farms helps landowners clear, shape, drain, build, and improve proper
 <div class="section-head">
 <h2>What We Build</h2>
 <p>
-Not every job is the same. Wolf Creek Farms focuses on the kind of land work that improves access, function, and long-term use.
+Wolf Creek Farms focuses on land work that improves access, function, drainage, and long-term property use.
 </p>
 </div>
 
 <div class="feature">
 <div class="feature-img">
-<img src="assets/equipment/wolf-creek-dozer.jpg" alt="Wolf Creek Farms dozer work">
+<img src="assets/equipment/wolf-creek-dozer.jpg" alt="Wolf Creek Farms dozer clearing land">
 </div>
 
 <div class="feature-copy">
@@ -775,7 +824,7 @@ We clear brush, small trees, overgrowth, and rough areas so your property can be
 
 <div class="feature">
 <div class="feature-img">
-<img src="assets/equipment/wolf-creek-dump-truck.jpg" alt="Wolf Creek Farms dump truck and road work">
+<img src="assets/equipment/wolf-creek-dump-truck.jpg" alt="Wolf Creek Farms dump truck for clay gravel and road work">
 </div>
 
 <div class="feature-copy">
@@ -796,7 +845,7 @@ From farm roads and hunting roads to driveways and clay gravel work, we help mak
 
 <div class="feature">
 <div class="feature-img">
-<img src="assets/equipment/wolf-creek-fpv.jpg" alt="Wolf Creek Farms land development view">
+<img src="assets/equipment/wolf-creek-fpv.jpg" alt="Wolf Creek Farms land development aerial style project view">
 </div>
 
 <div class="feature-copy">
@@ -861,16 +910,16 @@ The goal is simple: make the property more usable, accessible, and ready for wha
 <div class="section-head">
 <h2>Recent Work</h2>
 <p>
-Project photos do the selling. As more Wolf Creek jobs come in, this section can become a full before-and-after project gallery.
+Project photos do the selling. This section gives customers a quick look at real Wolf Creek Farms jobs.
 </p>
 </div>
 
 <div class="project-grid">
-<img src="assets/projects/project-2.jpg" alt="Wolf Creek Farms project photo">
-<img src="assets/projects/project-3.jpg" alt="Wolf Creek Farms land clearing project">
-<img src="assets/projects/project-4.jpg" alt="Wolf Creek Farms equipment work">
+<img src="assets/projects/project-2.jpg" alt="Wolf Creek Farms land clearing project">
+<img src="assets/projects/project-3.jpg" alt="Wolf Creek Farms completed land project">
+<img src="assets/projects/project-4.jpg" alt="Wolf Creek Farms equipment project">
 <img src="assets/projects/project-5.jpg" alt="Wolf Creek Farms road and land project">
-<img src="assets/projects/project-6.jpg" alt="Wolf Creek Farms completed project">
+<img src="assets/projects/project-6.jpg" alt="Wolf Creek Farms rural property project">
 </div>
 
 <div style="margin-top:30px;">
@@ -927,8 +976,8 @@ A clean process makes the job easier from the first call to the finished propert
 
 <div class="area-card">
 <div class="kicker">Service Area</div>
-<h2 class="section-title">East Central Alabama Land Work</h2>
-<p class="section-lead">
+<h2>East Central Alabama Land Work</h2>
+<p>
 Serving homeowners, farms, hunting properties, rural landowners, and commercial sites across the area.
 </p>
 
@@ -952,7 +1001,7 @@ Serving homeowners, farms, hunting properties, rural landowners, and commercial 
 </div>
 
 <div class="area-img">
-<img src="assets/equipment/wolf-creek-dozer-2.jpg" alt="Wolf Creek Farms dozer work">
+<img src="assets/equipment/wolf-creek-dozer-2.jpg" alt="Wolf Creek Farms dozer work in East Central Alabama">
 </div>
 
 </div>
@@ -973,7 +1022,9 @@ Land clearing, land prep, road building, drainage, pond building, demolition, an
 <footer>
 <div class="container">
 
+<div class="footer-logo-box">
 <img src="assets/logo/wolf-creek-logo.png" alt="Wolf Creek Farms">
+</div>
 
 <h3>Wolf Creek Farms</h3>
 
@@ -994,6 +1045,7 @@ Land Clearing • Land Prep • Road Building • Drainage • Pond Building •
 </div>
 
 <p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
 
 </div>
 </footer>
