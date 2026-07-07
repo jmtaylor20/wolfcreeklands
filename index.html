@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wolf Creek Farms | Land Clearing & Land Management in Alabama</title>
+
+<meta name="description" content="Wolf Creek Farms provides land clearing, land preparation, road building, drainage, house pads, pond building, demolition, hunting land development, fire breaks, clay gravel, and land management services.">
+
+<style>
+:root{
+--hunter:#1f3b2d;
+--hunter2:#2f5a3f;
+--charcoal:#111514;
+--charcoal2:#1b211f;
+--gray:#2b302e;
+--light:#f4f6f2;
+--white:#ffffff;
+--accent:#8fa86b;
+--shadow:0 18px 50px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+.container{width:min(1180px,92%);margin:auto;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+header{
+background:rgba(17,21,20,.96);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 0;
+}
+
+.logo img{height:76px;}
+
+.nav-right{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.nav-link{
+font-weight:800;
+color:var(--white);
+font-size:14px;
+letter-spacing:.5px;
+}
+
+.nav-link:hover{color:var(--accent);}
+
+.phone{
+font-weight:800;
+color:var(--white);
+font-size:17px;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:600;
+opacity:.7;
+margin-top:-2px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+font-weight:800;
+transition:.25s;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{background:var(--hunter2);color:white;}
+.btn-secondary{background:var(--white);color:var(--charcoal);}
+
+.hero{
+background:
+linear-gradient(90deg,rgba(17,21,20,.90),rgba(17,21,20,.45),rgba(17,21,20,.25)),
+url("wolf-creek-hero-excavator.jpg");
+background-size:cover;
+background-position:center;
+padding:95px 0;
+color:white;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:48px;
+align-items:center;
+}
+
+.hero-eyebrow{
+font-size:15px;
+font-weight:800;
+letter-spacing:1.5px;
+color:var(--accent);
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:clamp(54px,6vw,84px);
+line-height:.94;
+margin-bottom:20px;
+font-weight:900;
+text-transform:uppercase;
+}
+
+.hero p{
+font-size:21px;
+max-width:650px;
+margin-bottom:24px;
+color:#eef2ec;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-bottom:26px;
+}
+
+.pills{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.pill{
+border:1px solid rgba(255,255,255,.22);
+background:rgba(255,255,255,.08);
+padding:10px 14px;
+border-radius:999px;
+font-weight:700;
+font-size:14px;
+}
+
+.form-card{
+background:rgba(17,21,20,.92);
+color:white;
+padding:34px;
+border-radius:28px;
+box-shadow:var(--shadow);
+border:1px solid rgba(255,255,255,.14);
+}
+
+.form-card h2{
+font-size:30px;
+color:white;
+margin-bottom:6px;
+}
+
+.form-card p{
+color:#cfd8cc;
+margin-bottom:18px;
+}
+
+form{display:grid;gap:14px;}
+
+input,
+select,
+textarea{
+width:100%;
+padding:15px;
+border:1px solid rgba(255,255,255,.18);
+border-radius:14px;
+font-size:15px;
+font-family:inherit;
+background:#202724;
+color:white;
+}
+
+input::placeholder,
+textarea::placeholder{
+color:#b8c1b7;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+.submit-btn{
+border:none;
+background:var(--hunter2);
+color:white;
+font-weight:900;
+padding:16px;
+border-radius:999px;
+cursor:pointer;
+font-size:16px;
+}
+
+.trust{
+background:var(--charcoal2);
+padding:34px 0;
+border-top:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:16px;
+}
+
+.trust-item{
+background:#202724;
+padding:22px;
+border-radius:18px;
+text-align:center;
+font-weight:800;
+box-shadow:var(--shadow);
+color:white;
+border:1px solid rgba(255,255,255,.08);
+}
+
+section{padding:82px 0;}
+
+.section-title{
+font-size:clamp(40px,5vw,58px);
+line-height:1;
+margin-bottom:14px;
+color:white;
+font-weight:900;
+text-transform:uppercase;
+}
+
+.section-lead{
+max-width:760px;
+font-size:20px;
+color:#cbd3c9;
+margin-bottom:36px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.service-card{
+background:#202724;
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow);
+border:1px solid rgba(255,255,255,.09);
+}
+
+.service-card img{
+height:235px;
+width:100%;
+object-fit:cover;
+}
+
+.service-content{padding:24px;}
+
+.service-content h3{
+color:white;
+margin-bottom:10px;
+font-size:24px;
+}
+
+.service-content p{
+margin-bottom:18px;
+color:#cbd3c9;
+}
+
+.gallery{
+background:#151a18;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.gallery-grid img{
+height:270px;
+width:100%;
+object-fit:cover;
+border-radius:22px;
+box-shadow:var(--shadow);
+}
+
+.property-section{
+background:var(--charcoal2);
+}
+
+.property-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.property-card{
+background:#202724;
+border-radius:22px;
+padding:24px;
+box-shadow:var(--shadow);
+border:1px solid rgba(255,255,255,.09);
+}
+
+.property-card h3{
+color:white;
+font-size:22px;
+margin-bottom:10px;
+}
+
+.property-card p{
+color:#cbd3c9;
+}
+
+.about-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:800;
+color:#cbd3c9;
+}
+
+.cta-banner{
+background:linear-gradient(90deg,var(--hunter),var(--hunter2));
+color:white;
+text-align:center;
+padding:28px;
+font-size:24px;
+font-weight:900;
+}
+
+.cta-banner a{
+color:white;
+text-decoration:underline;
+}
+
+@media (max-width:980px){
+.hero-grid,
+.services-grid,
+.gallery-grid,
+.trust-grid,
+.property-grid{
+grid-template-columns:1fr;
+}
+
+header{
+position:relative;
+}
+
+.nav{
+flex-direction:column;
+gap:14px;
+padding:12px 0 16px;
+}
+
+.logo img{
+height:62px;
+margin:auto;
+}
+
+.nav-right{
+width:100%;
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:10px 18px;
+}
+
+.nav-link{font-size:15px;}
+
+.phone{
+width:100%;
+text-align:center;
+font-size:18px;
+margin-top:6px;
+}
+
+.hero{
+padding:58px 0;
+}
+
+.hero h1{
+font-size:44px;
+line-height:1;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.form-card{
+padding:24px;
+}
+
+section{padding:60px 0;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="wolf-creek-logo.png" alt="Wolf Creek Farms">
+</a>
+
+<div class="nav-right">
+<a href="index.html" class="nav-link">Home</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="projects.html" class="nav-link">Projects</a>
+<a href="about.html" class="nav-link">About</a>
+<a href="service-area.html" class="nav-link">Service Area</a>
+<a href="contact.html" class="nav-link">Contact</a>
+
+<div class="phone">
+334-XXX-XXXX
+<small>Call or Text for Estimates</small>
+</div>
+
+<a href="#estimate" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+<div class="hero-eyebrow">LAND CLEARING • LAND PREP • LAND MANAGEMENT</div>
+
+<h1>
+Built on Dirt.<br>
+Focused on Results.
+</h1>
+
+<p>
+Wolf Creek Farms provides professional land clearing, land preparation, road building, drainage, house pads, pond building, demolition, fire breaks, and hunting land development.
+</p>
+
+<div class="hero-buttons">
+<a href="#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:334XXXXXXX" class="btn btn-primary">Call Now</a>
+<a href="services.html" class="btn btn-primary">View Services</a>
+</div>
+
+<div class="pills">
+<div class="pill">Free Estimates</div>
+<div class="pill">Locally Owned</div>
+<div class="pill">Residential & Commercial</div>
+</div>
+</div>
+
+<div class="form-card" id="estimate">
+<h2>Request a Free Estimate</h2>
+<p>Tell us about your project. We’ll follow up as soon as possible.</p>
+
+<form
+name="wolf-creek-estimate"
+method="POST"
+action="/thank-you/"
+data-netlify="true"
+netlify-honeypot="bot-field"
+>
+
+<input type="hidden" name="form-name" value="wolf-creek-estimate">
+
+<p hidden>
+<label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+</p>
+
+<input type="text" name="name" placeholder="Name" required>
+<input type="tel" name="phone" placeholder="Phone" required>
+<input type="email" name="email" placeholder="Email">
+
+<select name="preferred-contact">
+<option value="">Preferred method of contact</option>
+<option>Call</option>
+<option>Text</option>
+<option>Email</option>
+</select>
+
+<input type="text" name="project-location" placeholder="Project location / property address">
+
+<select name="service-needed" required>
+<option value="">Service needed</option>
+<option>Land Clearing</option>
+<option>Land Prep / Land Preparation</option>
+<option>Road Building</option>
+<option>Drainage</option>
+<option>House Pad</option>
+<option>RV Lot</option>
+<option>Pond Building</option>
+<option>Demolition</option>
+<option>Fire Breaks</option>
+<option>Hunting Land Development</option>
+<option>Clay Gravel</option>
+<option>Other</option>
+</select>
+
+<textarea name="details" placeholder="Tell us about your project"></textarea>
+
+<button class="submit-btn" type="submit">Request My Free Estimate</button>
+</form>
+</div>
+
+</div>
+</section>
+
+<section class="trust">
+<div class="container trust-grid">
+<div class="trust-item">Free Estimates</div>
+<div class="trust-item">Land Clearing</div>
+<div class="trust-item">Road Building</div>
+<div class="trust-item">Drainage Work</div>
+<div class="trust-item">Land Management</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Land Services</h2>
+
+<p class="section-lead">
+From clearing overgrown property to building access roads and preparing land for future use, Wolf Creek Farms helps landowners get their property ready for what comes next.
+</p>
+
+<div class="services-grid">
+
+<div class="service-card">
+<img src="assets/land-clearing.jpg" alt="Land clearing service">
+<div class="service-content">
+<h3>Land Clearing</h3>
+<p>Clearing brush, small trees, overgrowth, and unwanted vegetation for homesites, pastures, roads, and property access.</p>
+<a href="land-clearing.html" class="btn btn-primary">Land Clearing</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/land-prep.jpg" alt="Land preparation service">
+<div class="service-content">
+<h3>Land Prep</h3>
+<p>Land preparation for homes, shops, barns, driveways, RV lots, hunting property, and long-term property improvement.</p>
+<a href="land-preparation.html" class="btn btn-primary">Land Prep</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/road-building.jpg" alt="Road building service">
+<div class="service-content">
+<h3>Road Building</h3>
+<p>Access roads, farm roads, hunting roads, driveways, clay gravel spreading, grading, and road repair.</p>
+<a href="road-building.html" class="btn btn-primary">Road Building</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/drainage.jpg" alt="Drainage service">
+<div class="service-content">
+<h3>Drainage</h3>
+<p>Drainage solutions for standing water, washouts, access issues, erosion control, and property protection.</p>
+<a href="drainage.html" class="btn btn-primary">Drainage</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/pond-building.jpg" alt="Pond building service">
+<div class="service-content">
+<h3>Pond Building</h3>
+<p>Pond construction, pond repair, lake edges, site shaping, and water management for rural properties.</p>
+<a href="pond-building.html" class="btn btn-primary">Pond Building</a>
+</div>
+</div>
+
+<div class="service-card">
+<img src="assets/demolition.jpg" alt="Demolition service">
+<div class="service-content">
+<h3>Demolition</h3>
+<p>Small structure demolition, cleanup, hauling, and site preparation after removal.</p>
+<a href="demolition.html" class="btn btn-primary">Demolition</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="gallery">
+<div class="container">
+
+<h2 class="section-title">Recent Projects</h2>
+
+<p class="section-lead">
+Real project photos will do the selling. Use before-and-after images, equipment shots, and completed work from Wolf Creek jobs.
+</p>
+
+<div class="gallery-grid">
+<img src="assets/project-1.jpg" alt="Wolf Creek Farms project photo">
+<img src="assets/project-2.jpg" alt="Wolf Creek Farms equipment photo">
+<img src="assets/project-3.jpg" alt="Wolf Creek Farms land clearing project">
+</div>
+
+<div style="margin-top:30px;">
+<a href="projects.html" class="btn btn-primary">View Project Gallery</a>
+</div>
+
+</div>
+</section>
+
+<section class="property-section">
+<div class="container">
+
+<h2 class="section-title">Built for Landowners</h2>
+
+<p class="section-lead">
+Wolf Creek Farms helps property owners improve access, drainage, usability, and long-term value.
+</p>
+
+<div class="property-grid">
+
+<div class="property-card">
+<h3>Hunting Land Development</h3>
+<p>Roads, fire breaks, access lanes, food plot prep, clearing, and property improvement.</p>
+</div>
+
+<div class="property-card">
+<h3>House Pads & RV Lots</h3>
+<p>Site prep for homes, shops, barns, mobile homes, campers, and RV lots.</p>
+</div>
+
+<div class="property-card">
+<h3>Fire Breaks</h3>
+<p>Cleared access and protection lines for timberland, hunting property, and rural land.</p>
+</div>
+
+<div class="property-card">
+<h3>Clay Gravel</h3>
+<p>Clay gravel delivery, spreading, driveway repair, access road improvement, and grading.</p>
+</div>
+
+</div>
+
+<div style="margin-top:30px;">
+<a href="#estimate" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="services.html" class="btn btn-primary">Explore All Services</a>
+</div>
+
+</div>
+</section>
+
+<section class="about-section">
+<div class="container hero-grid">
+
+<div>
+<h2 style="font-size:58px;line-height:1;margin-bottom:22px;">
+Local. Reliable. Built for Hard Work.
+</h2>
+
+<p style="font-size:21px;margin-bottom:26px;color:#edf3ea;">
+Wolf Creek Farms provides land services for homeowners, landowners, farms, hunting properties, and commercial sites. The goal is simple: do clean work, communicate clearly, and leave the property better than we found it.
+</p>
+
+<div class="pill" style="margin-bottom:12px;">Land clearing and land preparation</div>
+<div class="pill" style="margin-bottom:12px;">Roads, driveways, and clay gravel</div>
+<div class="pill" style="margin-bottom:12px;">Drainage, ponds, and site work</div>
+<div class="pill">Free estimates for local projects</div>
+
+<div style="margin-top:28px;">
+<a href="about.html" class="btn btn-secondary">About Wolf Creek Farms</a>
+<a href="#estimate" class="btn btn-primary">Get Estimate</a>
+</div>
+</div>
+
+<div>
+<img src="assets/wolf-creek-equipment.jpg" alt="Wolf Creek Farms equipment" style="border-radius:26px;">
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Service Area</h2>
+
+<p class="section-lead">
+Serving property owners across East Central Alabama and nearby communities.
+</p>
+
+<div class="pills">
+<div class="pill">Notasulga</div>
+<div class="pill">Tallassee</div>
+<div class="pill">Auburn</div>
+<div class="pill">Opelika</div>
+<div class="pill">Tuskegee</div>
+<div class="pill">Lake Martin</div>
+<div class="pill">Montgomery</div>
+<div class="pill">Wetumpka</div>
+<div class="pill">Eclectic</div>
+<div class="pill">Shorter</div>
+<div class="pill">Pike Road</div>
+</div>
+
+<div style="margin-top:30px;">
+<a href="#estimate" class="btn btn-primary">Request a Free Estimate</a>
+</div>
+
+</div>
+</section>
+
+<div class="cta-banner">
+Need land cleared, prepped, graded, or improved? <a href="#estimate">Request a Free Estimate</a>
+</div>
+
+<footer style="background:#0c100f;color:white;padding:70px 0;">
+<div class="container" style="text-align:center;">
+
+<img src="wolf-creek-logo.png" alt="Wolf Creek Farms" style="max-width:300px;margin:auto;margin-bottom:26px;">
+
+<h3 style="margin-bottom:10px;">Wolf Creek Farms</h3>
+
+<p style="margin-bottom:8px;">
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition
+</p>
+
+<p style="margin-bottom:8px;">
+334-XXX-XXXX • info@wolfcreekfarms.com
+</p>
+
+<div class="footer-links">
+<a href="services.html">Services</a>
+<a href="land-clearing.html">Land Clearing</a>
+<a href="land-preparation.html">Land Prep</a>
+<a href="road-building.html">Road Building</a>
+<a href="drainage.html">Drainage</a>
+<a href="pond-building.html">Pond Building</a>
+<a href="demolition.html">Demolition</a>
+<a href="projects.html">Projects</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<p style="margin-bottom:8px;">
+Free Estimates • Locally Owned • Residential • Commercial • Land Management
+</p>
+
+<p>wolfcreekfarms.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
