@@ -14,8 +14,6 @@
 --hunter2:#2f5a3f;
 --charcoal:#111514;
 --charcoal2:#1b211f;
---gray:#2b302e;
---light:#f4f6f2;
 --white:#ffffff;
 --accent:#8fa86b;
 --shadow:0 18px 50px rgba(0,0,0,.28);
@@ -61,7 +59,7 @@ gap:18px;
 
 .nav-link{
 font-weight:800;
-color:var(--white);
+color:white;
 font-size:14px;
 letter-spacing:.5px;
 }
@@ -70,7 +68,7 @@ letter-spacing:.5px;
 
 .phone{
 font-weight:800;
-color:var(--white);
+color:white;
 font-size:17px;
 }
 
@@ -93,12 +91,12 @@ transition:.25s;
 .btn:hover{transform:translateY(-2px);}
 
 .btn-primary{background:var(--hunter2);color:white;}
-.btn-secondary{background:var(--white);color:var(--charcoal);}
+.btn-secondary{background:white;color:var(--charcoal);}
 
 .hero{
 background:
-linear-gradient(90deg,rgba(17,21,20,.90),rgba(17,21,20,.45),rgba(17,21,20,.25)),
-url("wolf-creek-hero-excavator.jpg");
+linear-gradient(90deg,rgba(17,21,20,.92),rgba(17,21,20,.58),rgba(17,21,20,.28)),
+url("assets/equipment/wolf-creek-hero-excavator.jpg");
 background-size:cover;
 background-position:center;
 padding:95px 0;
@@ -374,9 +372,7 @@ text-decoration:underline;
 grid-template-columns:1fr;
 }
 
-header{
-position:relative;
-}
+header{position:relative;}
 
 .nav{
 flex-direction:column;
@@ -408,22 +404,16 @@ font-size:18px;
 margin-top:6px;
 }
 
-.hero{
-padding:58px 0;
-}
+.hero{padding:58px 0;}
 
 .hero h1{
 font-size:44px;
 line-height:1;
 }
 
-.hero p{
-font-size:18px;
-}
+.hero p{font-size:18px;}
 
-.form-card{
-padding:24px;
-}
+.form-card{padding:24px;}
 
 section{padding:60px 0;}
 }
@@ -436,7 +426,7 @@ section{padding:60px 0;}
 <div class="container nav">
 
 <a href="index.html" class="logo">
-<img src="wolf-creek-logo.png" alt="Wolf Creek Farms">
+<img src="assets/logo/wolf-creek-logo.png" alt="Wolf Creek Farms">
 </a>
 
 <div class="nav-right">
@@ -464,10 +454,7 @@ section{padding:60px 0;}
 <div>
 <div class="hero-eyebrow">LAND CLEARING • LAND PREP • LAND MANAGEMENT</div>
 
-<h1>
-Built on Dirt.<br>
-Focused on Results.
-</h1>
+<h1>Built on Dirt.<br>Focused on Results.</h1>
 
 <p>
 Wolf Creek Farms provides professional land clearing, land preparation, road building, drainage, house pads, pond building, demolition, fire breaks, and hunting land development.
@@ -490,14 +477,7 @@ Wolf Creek Farms provides professional land clearing, land preparation, road bui
 <h2>Request a Free Estimate</h2>
 <p>Tell us about your project. We’ll follow up as soon as possible.</p>
 
-<form
-name="wolf-creek-estimate"
-method="POST"
-action="/thank-you/"
-data-netlify="true"
-netlify-honeypot="bot-field"
->
-
+<form name="wolf-creek-estimate" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="wolf-creek-estimate">
 
 <p hidden>
@@ -564,7 +544,7 @@ From clearing overgrown property to building access roads and preparing land for
 <div class="services-grid">
 
 <div class="service-card">
-<img src="assets/land-clearing.jpg" alt="Land clearing service">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Land clearing service">
 <div class="service-content">
 <h3>Land Clearing</h3>
 <p>Clearing brush, small trees, overgrowth, and unwanted vegetation for homesites, pastures, roads, and property access.</p>
@@ -573,7 +553,7 @@ From clearing overgrown property to building access roads and preparing land for
 </div>
 
 <div class="service-card">
-<img src="assets/land-prep.jpg" alt="Land preparation service">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Land preparation service">
 <div class="service-content">
 <h3>Land Prep</h3>
 <p>Land preparation for homes, shops, barns, driveways, RV lots, hunting property, and long-term property improvement.</p>
@@ -582,7 +562,7 @@ From clearing overgrown property to building access roads and preparing land for
 </div>
 
 <div class="service-card">
-<img src="assets/road-building.jpg" alt="Road building service">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Road building service">
 <div class="service-content">
 <h3>Road Building</h3>
 <p>Access roads, farm roads, hunting roads, driveways, clay gravel spreading, grading, and road repair.</p>
@@ -591,7 +571,7 @@ From clearing overgrown property to building access roads and preparing land for
 </div>
 
 <div class="service-card">
-<img src="assets/drainage.jpg" alt="Drainage service">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Drainage service">
 <div class="service-content">
 <h3>Drainage</h3>
 <p>Drainage solutions for standing water, washouts, access issues, erosion control, and property protection.</p>
@@ -600,7 +580,7 @@ From clearing overgrown property to building access roads and preparing land for
 </div>
 
 <div class="service-card">
-<img src="assets/pond-building.jpg" alt="Pond building service">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Pond building service">
 <div class="service-content">
 <h3>Pond Building</h3>
 <p>Pond construction, pond repair, lake edges, site shaping, and water management for rural properties.</p>
@@ -609,7 +589,7 @@ From clearing overgrown property to building access roads and preparing land for
 </div>
 
 <div class="service-card">
-<img src="assets/demolition.jpg" alt="Demolition service">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Demolition service">
 <div class="service-content">
 <h3>Demolition</h3>
 <p>Small structure demolition, cleanup, hauling, and site preparation after removal.</p>
@@ -627,13 +607,13 @@ From clearing overgrown property to building access roads and preparing land for
 <h2 class="section-title">Recent Projects</h2>
 
 <p class="section-lead">
-Real project photos will do the selling. Use before-and-after images, equipment shots, and completed work from Wolf Creek jobs.
+Real project photos will do the selling. Add before-and-after images, equipment shots, and completed work from Wolf Creek jobs here.
 </p>
 
 <div class="gallery-grid">
-<img src="assets/project-1.jpg" alt="Wolf Creek Farms project photo">
-<img src="assets/project-2.jpg" alt="Wolf Creek Farms equipment photo">
-<img src="assets/project-3.jpg" alt="Wolf Creek Farms land clearing project">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Wolf Creek Farms equipment photo">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Wolf Creek Farms land clearing project">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Wolf Creek Farms project photo">
 </div>
 
 <div style="margin-top:30px;">
@@ -653,7 +633,6 @@ Wolf Creek Farms helps property owners improve access, drainage, usability, and 
 </p>
 
 <div class="property-grid">
-
 <div class="property-card">
 <h3>Hunting Land Development</h3>
 <p>Roads, fire breaks, access lanes, food plot prep, clearing, and property improvement.</p>
@@ -673,7 +652,6 @@ Wolf Creek Farms helps property owners improve access, drainage, usability, and 
 <h3>Clay Gravel</h3>
 <p>Clay gravel delivery, spreading, driveway repair, access road improvement, and grading.</p>
 </div>
-
 </div>
 
 <div style="margin-top:30px;">
@@ -708,7 +686,7 @@ Wolf Creek Farms provides land services for homeowners, landowners, farms, hunti
 </div>
 
 <div>
-<img src="assets/wolf-creek-equipment.jpg" alt="Wolf Creek Farms equipment" style="border-radius:26px;">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Wolf Creek Farms equipment" style="border-radius:26px;">
 </div>
 
 </div>
@@ -751,7 +729,7 @@ Need land cleared, prepped, graded, or improved? <a href="#estimate">Request a F
 <footer style="background:#0c100f;color:white;padding:70px 0;">
 <div class="container" style="text-align:center;">
 
-<img src="wolf-creek-logo.png" alt="Wolf Creek Farms" style="max-width:300px;margin:auto;margin-bottom:26px;">
+<img src="assets/logo/wolf-creek-logo.png" alt="Wolf Creek Farms" style="max-width:300px;margin:auto;margin-bottom:26px;">
 
 <h3 style="margin-bottom:10px;">Wolf Creek Farms</h3>
 
