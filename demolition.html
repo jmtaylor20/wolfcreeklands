@@ -1,1 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Demolition & Site Cleanup | Wolf Creek Farms</title>
+
+<meta name="description" content="Wolf Creek Farms provides demolition, structure removal, debris cleanup, hauling, site clearing, grading, and property preparation across East Central Alabama.">
+
+<style>
+:root{
+--hunter:#203b2d;
+--hunter2:#2f5a3f;
+--charcoal:#101413;
+--charcoal2:#171d1b;
+--panel:#202724;
+--white:#ffffff;
+--soft:#d7ded2;
+--muted:#aeb8aa;
+--accent:#91aa6d;
+--line:rgba(255,255,255,.14);
+--shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+font-weight:900;
+transition:.25s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{
+background:var(--hunter2);
+color:white;
+}
+
+.btn-secondary{
+background:white;
+color:var(--charcoal);
+}
+
+.btn-ghost{
+border-color:var(--line);
+color:white;
+background:rgba(255,255,255,.08);
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{color:var(--accent);}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:end;
+background:
+linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.72),rgba(16,20,19,.36)),
+linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
+url("assets/equipment/wolf-creek-hero-excavator.jpg");
+background-size:cover;
+background-position:center;
+padding:160px 0 82px;
+}
+
+.kicker{
+color:var(--accent);
+font-size:14px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(52px,7vw,96px);
+line-height:.9;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin-bottom:22px;
+max-width:900px;
+}
+
+.hero p{
+font-size:21px;
+max-width:720px;
+color:#edf3ea;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:28px;
+margin-bottom:42px;
+}
+
+.section-head h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+}
+
+.section-head p{
+max-width:570px;
+font-size:19px;
+color:var(--soft);
+}
+
+.overview{
+background:#0e1211;
+}
+
+.overview-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.panel{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px;
+box-shadow:var(--shadow);
+}
+
+.panel h3{
+font-size:30px;
+line-height:1.05;
+margin-bottom:14px;
+}
+
+.panel p{
+color:var(--soft);
+font-size:18px;
+}
+
+.demo-section{
+background:var(--charcoal2);
+}
+
+.demo-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.demo-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:26px;
+padding:28px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.demo-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.demo-card span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.demo-card h3{
+font-size:27px;
+line-height:1.05;
+margin-bottom:12px;
+}
+
+.demo-card p{
+color:var(--soft);
+}
+
+.uses-section{
+background:#0e1211;
+}
+
+.uses-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.use-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+}
+
+.use-card h3{
+font-size:23px;
+line-height:1.1;
+margin-bottom:12px;
+}
+
+.use-card p{
+color:var(--soft);
+}
+
+.process-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+background:rgba(255,255,255,.07);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+}
+
+.step-number{
+font-size:48px;
+line-height:1;
+font-weight:950;
+color:var(--accent);
+margin-bottom:18px;
+}
+
+.step h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.step p{
+color:var(--soft);
+}
+
+.note-section{
+background:var(--charcoal2);
+}
+
+.note-box{
+background:linear-gradient(135deg,rgba(32,59,45,.86),rgba(32,39,36,.94));
+border:1px solid var(--line);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+}
+
+.note-box h2{
+font-size:clamp(38px,5vw,64px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.note-box p{
+font-size:20px;
+color:var(--soft);
+max-width:880px;
+}
+
+.faq-section{
+background:#0e1211;
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
+.final-cta{
+background:
+linear-gradient(rgba(16,20,19,.78),rgba(16,20,19,.9)),
+url("assets/equipment/wolf-creek-dozer-2.jpg");
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:110px 0;
+}
+
+.final-cta h2{
+font-size:clamp(44px,6vw,84px);
+line-height:.92;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.final-cta p{
+font-size:21px;
+color:var(--soft);
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+background:transparent;
+padding:0;
+border:none;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{color:white;}
+
+@media(max-width:980px){
+
+header{
+position:relative;
+}
+
+.nav{
+flex-direction:column;
+padding:12px 0 16px;
+}
+
+.logo img{
+height:82px;
+}
+
+.nav-links,
+.nav-actions,
+.hero-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-head{
+display:block;
+}
+
+.section-head h2{
+margin-bottom:16px;
+}
+
+.overview-grid,
+.demo-grid,
+.uses-grid,
+.process-grid,
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:64px 0;
+}
+
+.footer-logo-box img{
+max-width:300px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="kicker">Demolition • Cleanup • Hauling • Site Prep</div>
+
+<h1>Demolition Work That Leaves Your Property Ready.</h1>
+
+<p>
+Wolf Creek Farms can remove old structures, clean up debris, haul material, clear the site, and prepare your property for what comes next.
+</p>
+
+<div class="hero-buttons">
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+<a href="#demolition-services" class="btn btn-ghost">View Demolition Services</a>
+</div>
+
+</div>
+</section>
+
+<section class="overview">
+<div class="container">
+
+<div class="section-head">
+<h2>Demolition & Site Cleanup</h2>
+<p>
+Good demolition is controlled, planned, and cleaned up. The job is not finished until the property is ready for the next step.
+</p>
+</div>
+
+<div class="overview-grid">
+
+<div class="panel">
+<h3>Removal With a Plan</h3>
+<p>
+Demolition starts with understanding the structure, the access, the debris, the surrounding property, and the final condition you need when the work is finished.
+</p>
+</div>
+
+<div class="panel">
+<h3>Cleanup Matters</h3>
+<p>
+Tearing something down is only part of the job. Cleanup, hauling, grading, and site preparation are what make the space useful again.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="demo-section" id="demolition-services">
+<div class="container">
+
+<div class="section-head">
+<h2>Demolition Services</h2>
+<p>
+Wolf Creek Farms can help with small structure removal, cleanup, material handling, and site preparation for rural properties, homesites, farms, and commercial spaces.
+</p>
+</div>
+
+<div class="demo-grid">
+
+<div class="demo-card">
+<span>Removal</span>
+<h3>Small Structure Demolition</h3>
+<p>Removal of old sheds, small buildings, barns, outbuildings, lean-tos, and similar structures.</p>
+</div>
+
+<div class="demo-card">
+<span>Cleanup</span>
+<h3>Debris Cleanup</h3>
+<p>Cleanup after demolition, storm damage, property clearing, old building removal, or land improvement work.</p>
+</div>
+
+<div class="demo-card">
+<span>Hauling</span>
+<h3>Material Hauling</h3>
+<p>Hauling debris, dirt, brush, old materials, and job-related waste from the project area.</p>
+</div>
+
+<div class="demo-card">
+<span>Preparation</span>
+<h3>Site Clearing</h3>
+<p>Clearing the area around the structure so equipment can access the job and the site can be safely improved.</p>
+</div>
+
+<div class="demo-card">
+<span>Grading</span>
+<h3>Post-Demo Grading</h3>
+<p>Leveling, shaping, and smoothing the area after removal so the property is ready for future use.</p>
+</div>
+
+<div class="demo-card">
+<span>Property Work</span>
+<h3>Land Reclaiming</h3>
+<p>Turn an old, cluttered, or unusable area into clean ground that can support the next phase of the property.</p>
+</div>
+
+<div class="demo-card">
+<span>Access</span>
+<h3>Road & Entry Support</h3>
+<p>Improve access for equipment, trailers, trucks, or future construction after demolition is complete.</p>
+</div>
+
+<div class="demo-card">
+<span>Future Build</span>
+<h3>Build-Ready Prep</h3>
+<p>Prepare areas for shops, barns, homesites, driveways, parking pads, equipment areas, or future land work.</p>
+</div>
+
+<div class="demo-card">
+<span>Custom Work</span>
+<h3>Project-Specific Removal</h3>
+<p>Have something specific that needs to come down or be cleaned up? Call and talk through the project.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="uses-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Common Demolition Jobs</h2>
+<p>
+Most demolition projects are part of a larger property improvement plan. The removal should make the next step easier.
+</p>
+</div>
+
+<div class="uses-grid">
+
+<div class="use-card">
+<h3>Old Sheds</h3>
+<p>Remove aging, damaged, unsafe, or unwanted storage buildings.</p>
+</div>
+
+<div class="use-card">
+<h3>Outbuildings</h3>
+<p>Clear small barns, lean-tos, shelters, and old utility structures.</p>
+</div>
+
+<div class="use-card">
+<h3>Farm Cleanup</h3>
+<p>Remove clutter, debris, and old material from farm or rural property.</p>
+</div>
+
+<div class="use-card">
+<h3>Homesite Prep</h3>
+<p>Clear old structures or debris before preparing a home, shop, or barn site.</p>
+</div>
+
+<div class="use-card">
+<h3>Storm Damage</h3>
+<p>Clean up damaged structures, fallen material, and unsafe debris.</p>
+</div>
+
+<div class="use-card">
+<h3>Access Improvement</h3>
+<p>Open up areas blocked by old structures, brush, debris, or rough ground.</p>
+</div>
+
+<div class="use-card">
+<h3>Commercial Cleanup</h3>
+<p>Help prepare small commercial sites for improvement, access, or repair.</p>
+</div>
+
+<div class="use-card">
+<h3>Property Reclaiming</h3>
+<p>Turn unused or neglected ground into clean, workable space.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="process-section">
+<div class="container">
+
+<div class="section-head">
+<h2>How Demolition Jobs Work</h2>
+<p>
+Controlled demolition starts with a clear look at the site and a practical plan for cleanup.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Walk the Site</h3>
+<p>We look at the structure, access, nearby obstacles, utilities, debris, and final goal.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Plan the Removal</h3>
+<p>We determine equipment needs, cleanup approach, hauling needs, and safety concerns.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Remove & Clean</h3>
+<p>The structure or debris is removed, loaded, hauled, and cleaned up as planned.</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Prep the Site</h3>
+<p>The area can be graded, shaped, cleared, or prepared for the next project.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="note-section">
+<div class="container">
+
+<div class="note-box">
+<h2>Demolition Should Create a Better Property, Not a Bigger Mess.</h2>
+<p>
+The value of demolition is not only in taking something down. The value is in leaving the property safer, cleaner, easier to use, and ready for what comes next.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Questions</h2>
+<p>
+A few common questions about demolition, cleanup, hauling, and property preparation.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>What kind of demolition do you do?</h3>
+<p>Wolf Creek Farms can help with small structures, sheds, outbuildings, debris cleanup, and related site preparation.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you haul away debris?</h3>
+<p>Yes. Debris hauling can be included depending on the job, site access, and cleanup needs.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you grade the area after demolition?</h3>
+<p>Yes. The area can be shaped, leveled, cleaned up, and prepared for future use.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you prepare a site after removing an old structure?</h3>
+<p>Yes. Wolf Creek Farms can help prepare the area for a driveway, shop, barn, homesite, parking area, or future land work.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you handle large commercial demolition?</h3>
+<p>Wolf Creek Farms focuses on smaller demolition, rural property cleanup, site prep, and land improvement projects. Call to talk through the job.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide free estimates?</h3>
+<p>Yes. Call 334-207-3331 or request an estimate online.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+
+<h2>Need Something Removed?</h2>
+
+<p>
+From old sheds and small structures to cleanup, hauling, grading, and site preparation, Wolf Creek Farms can help clear the way for what comes next.
+</p>
+
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
