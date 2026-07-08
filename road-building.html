@@ -1,1 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Road Building & Driveway Repair | Wolf Creek Farms</title>
+
+<meta name="description" content="Wolf Creek Farms provides road building, driveway repair, access roads, farm roads, hunting roads, clay gravel spreading, grading, drainage support, and rural road improvements across East Central Alabama.">
+
+<style>
+:root{
+--hunter:#203b2d;
+--hunter2:#2f5a3f;
+--charcoal:#101413;
+--charcoal2:#171d1b;
+--panel:#202724;
+--white:#ffffff;
+--soft:#d7ded2;
+--muted:#aeb8aa;
+--accent:#91aa6d;
+--line:rgba(255,255,255,.14);
+--shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+font-weight:900;
+transition:.25s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{background:var(--hunter2);color:white;}
+.btn-secondary{background:white;color:var(--charcoal);}
+.btn-ghost{border-color:var(--line);color:white;background:rgba(255,255,255,.08);}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{color:var(--accent);}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:end;
+background:
+linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.70),rgba(16,20,19,.28)),
+linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
+url("assets/projects/project-11.jpg");
+background-size:cover;
+background-position:center;
+padding:160px 0 82px;
+}
+
+.kicker{
+color:var(--accent);
+font-size:14px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(52px,7vw,96px);
+line-height:.9;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin-bottom:22px;
+max-width:930px;
+}
+
+.hero p{
+font-size:21px;
+max-width:740px;
+color:#edf3ea;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:28px;
+margin-bottom:42px;
+}
+
+.section-head h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+}
+
+.section-head p{
+max-width:570px;
+font-size:19px;
+color:var(--soft);
+}
+
+.overview{
+background:#0e1211;
+}
+
+.overview-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.panel{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px;
+box-shadow:var(--shadow);
+}
+
+.panel h3{
+font-size:30px;
+line-height:1.05;
+margin-bottom:14px;
+}
+
+.panel p{
+color:var(--soft);
+font-size:18px;
+}
+
+.image-feature{
+background:var(--charcoal2);
+}
+
+.image-feature-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:32px;
+align-items:center;
+}
+
+.image-feature img{
+height:440px;
+width:100%;
+object-fit:cover;
+border-radius:30px;
+box-shadow:var(--shadow);
+}
+
+.image-feature-copy h2{
+font-size:clamp(40px,5vw,68px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.image-feature-copy p{
+font-size:20px;
+color:var(--soft);
+margin-bottom:22px;
+}
+
+.checks{
+display:grid;
+gap:12px;
+font-weight:850;
+color:#f2f6ef;
+}
+
+.road-section{
+background:#0e1211;
+}
+
+.road-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.road-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:26px;
+padding:28px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.road-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.road-card span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.road-card h3{
+font-size:27px;
+line-height:1.05;
+margin-bottom:12px;
+}
+
+.road-card p{
+color:var(--soft);
+}
+
+.gallery-section{
+background:var(--charcoal2);
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr .8fr;
+gap:18px;
+}
+
+.gallery-grid img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:24px;
+box-shadow:var(--shadow);
+}
+
+.gallery-grid img:first-child{
+grid-row:span 2;
+height:538px;
+}
+
+.problem-section{
+background:#0e1211;
+}
+
+.problem-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.problem-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+}
+
+.problem-card h3{
+font-size:23px;
+line-height:1.1;
+margin-bottom:12px;
+}
+
+.problem-card p{
+color:var(--soft);
+}
+
+.process-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+background:rgba(255,255,255,.07);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+}
+
+.step-number{
+font-size:48px;
+line-height:1;
+font-weight:950;
+color:var(--accent);
+margin-bottom:18px;
+}
+
+.step h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.step p{
+color:var(--soft);
+}
+
+.note-section{
+background:var(--charcoal2);
+}
+
+.note-box{
+background:linear-gradient(135deg,rgba(32,59,45,.86),rgba(32,39,36,.94));
+border:1px solid var(--line);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+}
+
+.note-box h2{
+font-size:clamp(38px,5vw,64px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.note-box p{
+font-size:20px;
+color:var(--soft);
+max-width:900px;
+}
+
+.faq-section{
+background:#0e1211;
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
+.final-cta{
+background:
+linear-gradient(rgba(16,20,19,.78),rgba(16,20,19,.9)),
+url("assets/projects/project-10.jpg");
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:110px 0;
+}
+
+.final-cta h2{
+font-size:clamp(44px,6vw,84px);
+line-height:.92;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.final-cta p{
+font-size:21px;
+color:var(--soft);
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+background:transparent;
+padding:0;
+border:none;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{color:white;}
+
+@media(max-width:980px){
+
+header{
+position:relative;
+}
+
+.nav{
+flex-direction:column;
+padding:12px 0 16px;
+}
+
+.logo img{
+height:82px;
+}
+
+.nav-links,
+.nav-actions,
+.hero-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-head{
+display:block;
+}
+
+.section-head h2{
+margin-bottom:16px;
+}
+
+.overview-grid,
+.image-feature-grid,
+.road-grid,
+.gallery-grid,
+.problem-grid,
+.process-grid,
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+.image-feature img,
+.gallery-grid img,
+.gallery-grid img:first-child{
+height:310px;
+grid-row:auto;
+}
+
+section{
+padding:64px 0;
+}
+
+.footer-logo-box img{
+max-width:300px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="kicker">Road Building • Driveway Repair • Access Roads</div>
+
+<h1>Build Access That Holds Up.</h1>
+
+<p>
+Wolf Creek Farms builds and repairs rural roads, driveways, hunting roads, farm roads, and access routes with grading, drainage, clay gravel, and long-term use in mind.
+</p>
+
+<div class="hero-buttons">
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+<a href="#road-services" class="btn btn-ghost">View Road Services</a>
+</div>
+
+</div>
+</section>
+
+<section class="overview">
+<div class="container">
+
+<div class="section-head">
+<h2>Road Building Services</h2>
+<p>
+A good road does more than connect one point to another. It gives your property reliable access and reduces long-term maintenance headaches.
+</p>
+</div>
+
+<div class="overview-grid">
+
+<div class="panel">
+<h3>Better Access Starts With the Base</h3>
+<p>
+Road building begins with understanding the ground, slope, water flow, traffic, material needs, and how the road will be used throughout the year.
+</p>
+</div>
+
+<div class="panel">
+<h3>Drainage Makes or Breaks the Road</h3>
+<p>
+Many road problems come from water. Good grading, ditching, culvert support, and material placement help keep roads usable after heavy rain.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="image-feature">
+<div class="container image-feature-grid">
+
+<div>
+<img src="assets/projects/project-10.jpg" alt="Road building and clay gravel work by Wolf Creek Farms">
+</div>
+
+<div class="image-feature-copy">
+<div class="kicker">Access That Works</div>
+<h2>Rural Roads Need a Practical Plan.</h2>
+<p>
+A road that looks good on day one can fail fast if the base, slope, drainage, and material do not match the property.
+</p>
+
+<div class="checks">
+<div>✓ Access road building</div>
+<div>✓ Clay gravel spreading</div>
+<div>✓ Driveway repair</div>
+<div>✓ Drainage and grading support</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="road-section" id="road-services">
+<div class="container">
+
+<div class="section-head">
+<h2>Road & Access Services</h2>
+<p>
+Wolf Creek Farms can help build, repair, and improve roads for homesites, hunting property, farms, rural land, equipment access, and commercial sites.
+</p>
+</div>
+
+<div class="road-grid">
+
+<div class="road-card">
+<span>Access</span>
+<h3>Access Roads</h3>
+<p>Build roads that help you reach homesites, fields, timber, hunting land, ponds, barns, and back acreage.</p>
+</div>
+
+<div class="road-card">
+<span>Residential</span>
+<h3>Driveways</h3>
+<p>Build, reshape, or repair rural driveways with grading, material, and drainage in mind.</p>
+</div>
+
+<div class="road-card">
+<span>Hunting Land</span>
+<h3>Hunting Roads</h3>
+<p>Improve routes to stands, food plots, gates, cameras, fields, and hard-to-reach property areas.</p>
+</div>
+
+<div class="road-card">
+<span>Farm Use</span>
+<h3>Farm Roads</h3>
+<p>Support access for equipment, tractors, trucks, trailers, barns, fields, and work areas.</p>
+</div>
+
+<div class="road-card">
+<span>Materials</span>
+<h3>Clay Gravel Roads</h3>
+<p>Spread and grade clay gravel for rural roads, driveways, turnarounds, and high-use access areas.</p>
+</div>
+
+<div class="road-card">
+<span>Repair</span>
+<h3>Road Repair</h3>
+<p>Fix rough roads, soft spots, potholes, ruts, washed areas, and damaged access points.</p>
+</div>
+
+<div class="road-card">
+<span>Water Control</span>
+<h3>Road Drainage</h3>
+<p>Shape roads, ditches, slopes, and water flow so runoff does not destroy the road surface.</p>
+</div>
+
+<div class="road-card">
+<span>Entrances</span>
+<h3>Culvert & Entry Support</h3>
+<p>Improve entrances, culvert areas, ditch crossings, and access points that need better stability.</p>
+</div>
+
+<div class="road-card">
+<span>Custom</span>
+<h3>Property Access Projects</h3>
+<p>Need a route opened or improved? Wolf Creek Farms can look at the land and build a practical plan.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Road Work in Progress</h2>
+<p>
+These photos show the type of material, grading, access, and drainage work that supports rural road building and repair.
+</p>
+</div>
+
+<div class="gallery-grid">
+<img src="assets/projects/project-11.jpg" alt="Road building project by Wolf Creek Farms">
+<img src="assets/projects/project-10.jpg" alt="Clay gravel and access road work">
+<img src="assets/projects/project-8.jpg" alt="Drainage support for road work">
+<img src="assets/projects/project-11.jpg" alt="Improved rural access road">
+<img src="assets/projects/project-10.jpg" alt="Road building materials and grading">
+</div>
+
+</div>
+</section>
+
+<section class="problem-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Road Problems We Help Solve</h2>
+<p>
+Most road issues come from weak base, poor drainage, bad slope, heavy traffic, or material that does not fit the property.
+</p>
+</div>
+
+<div class="problem-grid">
+
+<div class="problem-card">
+<h3>Ruts</h3>
+<p>Rutted roads can make access rough, slow, and hard on vehicles or equipment.</p>
+</div>
+
+<div class="problem-card">
+<h3>Washouts</h3>
+<p>Water cutting across the road can remove material and damage the base.</p>
+</div>
+
+<div class="problem-card">
+<h3>Soft Spots</h3>
+<p>Wet or weak areas may need grading, drainage, material, or a better road base.</p>
+</div>
+
+<div class="problem-card">
+<h3>Potholes</h3>
+<p>Repeated traffic and trapped water can create holes that keep getting worse.</p>
+</div>
+
+<div class="problem-card">
+<h3>Bad Entrances</h3>
+<p>Driveway and gate entrances need stable material, proper slope, and water control.</p>
+</div>
+
+<div class="problem-card">
+<h3>Standing Water</h3>
+<p>Water sitting on the road can weaken material and lead to repeated repairs.</p>
+</div>
+
+<div class="problem-card">
+<h3>Culvert Issues</h3>
+<p>Culvert areas often need shaping, rock, grading, or material support.</p>
+</div>
+
+<div class="problem-card">
+<h3>Poor Access</h3>
+<p>Some properties need new routes opened before they can be used well.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="process-section">
+<div class="container">
+
+<div class="section-head">
+<h2>How Road Building Works</h2>
+<p>
+The right road plan depends on how the road will be used, where water goes, and what the ground can support.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Review the Route</h3>
+<p>We look at terrain, slope, access, water flow, existing road base, and traffic needs.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Plan the Road</h3>
+<p>The plan may include clearing, grading, drainage, culvert support, base work, and material.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Build or Repair</h3>
+<p>The route is shaped, repaired, opened, graded, and prepared based on the project needs.</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Add Material</h3>
+<p>Clay gravel or other material may be spread and graded to improve the road surface.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="note-section">
+<div class="container">
+
+<div class="note-box">
+<h2>A Road Is Only as Good as the Ground and Drainage Under It.</h2>
+<p>
+Adding material helps, but it may not fix the source of the problem. Wolf Creek Farms looks at water, slope, base, access, and traffic so the road works better over time.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Questions</h2>
+<p>
+A few common questions about road building, driveway repair, clay gravel, drainage, and rural access roads.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>Can you build a new access road?</h3>
+<p>Yes. Wolf Creek Farms can open and build access roads for homesites, farms, hunting property, ponds, barns, and rural land.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you repair driveways?</h3>
+<p>Yes. Driveway repair may include grading, material, drainage correction, clay gravel, and road shaping.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you spread clay gravel?</h3>
+<p>Yes. Clay gravel can be delivered, spread, graded, and shaped for driveways, roads, and access areas.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you fix road washouts?</h3>
+<p>Yes. Washouts may require grading, drainage changes, rip rap, culvert support, or better water control.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you build hunting roads?</h3>
+<p>Yes. Hunting roads, food plot access, fire breaks, and rural property routes can be opened or improved.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide free estimates?</h3>
+<p>Yes. Call 334-207-3331 or request an estimate online.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+
+<h2>Need a Road Built or Repaired?</h2>
+
+<p>
+From driveways and farm roads to hunting roads, clay gravel, culvert support, drainage, and access improvements, Wolf Creek Farms can help.
+</p>
+
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
