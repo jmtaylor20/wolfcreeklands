@@ -1,1 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Hunting Land Development | Wolf Creek Farms</title>
+
+<meta name="description" content="Wolf Creek Farms provides hunting land development, food plot preparation, fire breaks, access roads, shooting lanes, land clearing, clay gravel, and rural property improvements across East Central Alabama.">
+
+<style>
+:root{
+--hunter:#203b2d;
+--hunter2:#2f5a3f;
+--charcoal:#101413;
+--charcoal2:#171d1b;
+--panel:#202724;
+--white:#ffffff;
+--soft:#d7ded2;
+--muted:#aeb8aa;
+--accent:#91aa6d;
+--line:rgba(255,255,255,.14);
+--shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+font-weight:900;
+transition:.25s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{background:var(--hunter2);color:white;}
+.btn-secondary{background:white;color:var(--charcoal);}
+.btn-ghost{border-color:var(--line);color:white;background:rgba(255,255,255,.08);}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{color:var(--accent);}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:end;
+background:
+linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.70),rgba(16,20,19,.28)),
+linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
+url("assets/equipment/wolf-creek-fpv.jpg");
+background-size:cover;
+background-position:center;
+padding:160px 0 82px;
+}
+
+.kicker{
+color:var(--accent);
+font-size:14px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(52px,7vw,96px);
+line-height:.9;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin-bottom:22px;
+max-width:930px;
+}
+
+.hero p{
+font-size:21px;
+max-width:740px;
+color:#edf3ea;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:28px;
+margin-bottom:42px;
+}
+
+.section-head h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+}
+
+.section-head p{
+max-width:570px;
+font-size:19px;
+color:var(--soft);
+}
+
+.overview{
+background:#0e1211;
+}
+
+.overview-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.panel{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px;
+box-shadow:var(--shadow);
+}
+
+.panel h3{
+font-size:30px;
+line-height:1.05;
+margin-bottom:14px;
+}
+
+.panel p{
+color:var(--soft);
+font-size:18px;
+}
+
+.image-feature{
+background:var(--charcoal2);
+}
+
+.image-feature-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:32px;
+align-items:center;
+}
+
+.image-feature img{
+height:440px;
+width:100%;
+object-fit:cover;
+border-radius:30px;
+box-shadow:var(--shadow);
+}
+
+.image-feature-copy h2{
+font-size:clamp(40px,5vw,68px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.image-feature-copy p{
+font-size:20px;
+color:var(--soft);
+margin-bottom:22px;
+}
+
+.checks{
+display:grid;
+gap:12px;
+font-weight:850;
+color:#f2f6ef;
+}
+
+.hunting-section{
+background:#0e1211;
+}
+
+.hunting-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.hunting-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:26px;
+padding:28px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.hunting-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.hunting-card span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.hunting-card h3{
+font-size:27px;
+line-height:1.05;
+margin-bottom:12px;
+}
+
+.hunting-card p{
+color:var(--soft);
+}
+
+.property-section{
+background:var(--charcoal2);
+}
+
+.property-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.property-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+}
+
+.property-card h3{
+font-size:23px;
+line-height:1.1;
+margin-bottom:12px;
+}
+
+.property-card p{
+color:var(--soft);
+}
+
+.process-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+background:rgba(255,255,255,.07);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+}
+
+.step-number{
+font-size:48px;
+line-height:1;
+font-weight:950;
+color:var(--accent);
+margin-bottom:18px;
+}
+
+.step h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.step p{
+color:var(--soft);
+}
+
+.note-section{
+background:var(--charcoal2);
+}
+
+.note-box{
+background:linear-gradient(135deg,rgba(32,59,45,.86),rgba(32,39,36,.94));
+border:1px solid var(--line);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+}
+
+.note-box h2{
+font-size:clamp(38px,5vw,64px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.note-box p{
+font-size:20px;
+color:var(--soft);
+max-width:900px;
+}
+
+.faq-section{
+background:#0e1211;
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
+.final-cta{
+background:
+linear-gradient(rgba(16,20,19,.78),rgba(16,20,19,.9)),
+url("assets/projects/project-10.jpg");
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:110px 0;
+}
+
+.final-cta h2{
+font-size:clamp(44px,6vw,84px);
+line-height:.92;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.final-cta p{
+font-size:21px;
+color:var(--soft);
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+background:transparent;
+padding:0;
+border:none;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{color:white;}
+
+@media(max-width:980px){
+
+header{
+position:relative;
+}
+
+.nav{
+flex-direction:column;
+padding:12px 0 16px;
+}
+
+.logo img{
+height:82px;
+}
+
+.nav-links,
+.nav-actions,
+.hero-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-head{
+display:block;
+}
+
+.section-head h2{
+margin-bottom:16px;
+}
+
+.overview-grid,
+.image-feature-grid,
+.hunting-grid,
+.property-grid,
+.process-grid,
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+.image-feature img{
+height:310px;
+}
+
+section{
+padding:64px 0;
+}
+
+.footer-logo-box img{
+max-width:300px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="kicker">Hunting Land • Food Plots • Roads • Fire Breaks</div>
+
+<h1>Build Better Hunting Land From the Ground Up.</h1>
+
+<p>
+Wolf Creek Farms helps landowners improve hunting property with access roads, food plot preparation, shooting lanes, fire breaks, clearing, drainage, and rural land management.
+</p>
+
+<div class="hero-buttons">
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+<a href="#hunting-services" class="btn btn-ghost">View Hunting Land Services</a>
+</div>
+
+</div>
+</section>
+
+<section class="overview">
+<div class="container">
+
+<div class="section-head">
+<h2>Hunting Land Development</h2>
+<p>
+Good hunting property is not random. Access, food, cover, travel routes, water, and visibility all matter.
+</p>
+</div>
+
+<div class="overview-grid">
+
+<div class="panel">
+<h3>Make the Land Easier to Use</h3>
+<p>
+Wolf Creek Farms can help improve access, open trails, clear lanes, prep food plots, build fire breaks, and make rural property more usable year-round.
+</p>
+</div>
+
+<div class="panel">
+<h3>Plan for the Whole Property</h3>
+<p>
+Hunting land work should support how the property is hunted, maintained, accessed, and improved over time. The right plan makes every acre work better.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="image-feature">
+<div class="container image-feature-grid">
+
+<div>
+<img src="assets/projects/project-10.jpg" alt="Hunting land development and access work by Wolf Creek Farms">
+</div>
+
+<div class="image-feature-copy">
+<div class="kicker">Access Changes Everything</div>
+<h2>If You Can’t Get There, You Can’t Manage It.</h2>
+<p>
+Trails, roads, fire breaks, and cleared access points make it easier to hunt, maintain, plant, check cameras, move equipment, and improve the property.
+</p>
+
+<div class="checks">
+<div>✓ Access roads and trails</div>
+<div>✓ Food plot preparation</div>
+<div>✓ Shooting lanes and fire breaks</div>
+<div>✓ Clearing and land management</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="hunting-section" id="hunting-services">
+<div class="container">
+
+<div class="section-head">
+<h2>Hunting Land Services</h2>
+<p>
+Wolf Creek Farms can help shape hunting property for access, visibility, maintenance, and long-term use.
+</p>
+</div>
+
+<div class="hunting-grid">
+
+<div class="hunting-card">
+<span>Access</span>
+<h3>Hunting Roads</h3>
+<p>Build or improve hunting roads, farm roads, trails, and access routes through rural property.</p>
+</div>
+
+<div class="hunting-card">
+<span>Food Source</span>
+<h3>Food Plot Prep</h3>
+<p>Clear, shape, and prepare food plot areas so they are easier to plant, access, and maintain.</p>
+</div>
+
+<div class="hunting-card">
+<span>Visibility</span>
+<h3>Shooting Lanes</h3>
+<p>Open up strategic lanes while keeping the property usable, safe, and manageable.</p>
+</div>
+
+<div class="hunting-card">
+<span>Protection</span>
+<h3>Fire Breaks</h3>
+<p>Create cleared lines that improve access and help protect timber, fields, and hunting property.</p>
+</div>
+
+<div class="hunting-card">
+<span>Clearing</span>
+<h3>Land Clearing</h3>
+<p>Clear overgrown areas, open rough ground, and reclaim usable acreage for hunting or access.</p>
+</div>
+
+<div class="hunting-card">
+<span>Water Flow</span>
+<h3>Drainage Improvements</h3>
+<p>Address muddy access, washed-out roads, low areas, culverts, and erosion problems.</p>
+</div>
+
+<div class="hunting-card">
+<span>Materials</span>
+<h3>Clay Gravel Access</h3>
+<p>Improve key roads, entrances, turnarounds, and wet areas with clay gravel and grading support.</p>
+</div>
+
+<div class="hunting-card">
+<span>Management</span>
+<h3>Property Cleanup</h3>
+<p>Clean up rough areas, remove debris, improve access points, and make the property easier to maintain.</p>
+</div>
+
+<div class="hunting-card">
+<span>Custom</span>
+<h3>Landowner Projects</h3>
+<p>Every hunting property is different. Wolf Creek Farms can talk through your goals and help build a practical plan.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="property-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Built for How You Use the Land</h2>
+<p>
+Hunting land development works best when it supports real use, not only a clean look.
+</p>
+</div>
+
+<div class="property-grid">
+
+<div class="property-card">
+<h3>Access</h3>
+<p>Reach stands, fields, gates, cameras, plots, and back corners without fighting the property.</p>
+</div>
+
+<div class="property-card">
+<h3>Maintenance</h3>
+<p>Make it easier to mow, spray, plant, repair roads, check water flow, and manage the land.</p>
+</div>
+
+<div class="property-card">
+<h3>Huntability</h3>
+<p>Improve travel routes, visibility, shooting lanes, plot locations, and usable access.</p>
+</div>
+
+<div class="property-card">
+<h3>Long-Term Value</h3>
+<p>Better access, cleaner roads, and usable acreage can improve the property for years.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="process-section">
+<div class="container">
+
+<div class="section-head">
+<h2>How Hunting Land Jobs Work</h2>
+<p>
+The right plan starts with how you want to hunt, access, and maintain the property.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Walk the Property</h3>
+<p>We look at access, terrain, roads, fields, timber, water flow, and problem areas.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Talk Goals</h3>
+<p>We talk through how you hunt, where you need access, and what improvements matter most.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Build the Plan</h3>
+<p>The work may include roads, plots, lanes, fire breaks, clearing, drainage, or material work.</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Improve the Land</h3>
+<p>The property is shaped, cleared, graded, opened up, and improved for better long-term use.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="note-section">
+<div class="container">
+
+<div class="note-box">
+<h2>Great Hunting Property Is Easier to Hunt, Easier to Maintain, and Easier to Improve.</h2>
+<p>
+The right land work can make the property more accessible, more useful, and more manageable without over-clearing or hurting the natural layout of the land.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Questions</h2>
+<p>
+A few common questions about hunting roads, food plots, fire breaks, clearing, and rural land development.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>Can you build hunting roads?</h3>
+<p>Yes. Wolf Creek Farms can build or improve hunting roads, farm roads, trails, and access routes.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you prepare food plots?</h3>
+<p>Yes. Food plot prep can include clearing, shaping, grading, access improvement, and site preparation.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you clear shooting lanes?</h3>
+<p>Yes. Shooting lanes can be opened based on property layout, safety, access, and your hunting goals.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you create fire breaks?</h3>
+<p>Yes. Fire breaks can help improve access and provide cleared lines across timber or rural property.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you fix muddy roads on hunting land?</h3>
+<p>Yes. Road repair may include grading, drainage correction, clay gravel, culvert support, or rerouting water.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide free estimates?</h3>
+<p>Yes. Call 334-207-3331 or request an estimate online.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+
+<h2>Ready to Improve Your Hunting Land?</h2>
+
+<p>
+From roads and food plots to fire breaks, shooting lanes, drainage, clearing, and clay gravel, Wolf Creek Farms can help make your property work better.
+</p>
+
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
