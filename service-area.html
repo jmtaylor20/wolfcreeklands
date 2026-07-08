@@ -1,1 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Service Area | Wolf Creek Farms</title>
+
+<meta name="description" content="Wolf Creek Farms is based in Notasulga and provides land clearing, land preparation, road building, drainage, house pads, pond building, demolition, clay gravel, and hunting land development across Central Alabama.">
+
+<style>
+:root{
+--hunter:#203b2d;
+--hunter2:#2f5a3f;
+--charcoal:#101413;
+--charcoal2:#171d1b;
+--panel:#202724;
+--white:#ffffff;
+--soft:#d7ded2;
+--muted:#aeb8aa;
+--accent:#91aa6d;
+--line:rgba(255,255,255,.14);
+--shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+font-weight:900;
+transition:.25s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{background:var(--hunter2);color:white;}
+.btn-secondary{background:white;color:var(--charcoal);}
+.btn-ghost{border-color:var(--line);color:white;background:rgba(255,255,255,.08);}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{color:var(--accent);}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:end;
+background:
+linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.70),rgba(16,20,19,.28)),
+linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
+url("assets/equipment/wolf-creek-hero-excavator.jpg");
+background-size:cover;
+background-position:center;
+padding:160px 0 82px;
+}
+
+.kicker{
+color:var(--accent);
+font-size:14px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(52px,7vw,96px);
+line-height:.9;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin-bottom:22px;
+max-width:930px;
+}
+
+.hero p{
+font-size:21px;
+max-width:760px;
+color:#edf3ea;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:28px;
+margin-bottom:42px;
+}
+
+.section-head h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+}
+
+.section-head p{
+max-width:590px;
+font-size:19px;
+color:var(--soft);
+}
+
+.base-section{
+background:#0e1211;
+}
+
+.base-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.panel{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px;
+box-shadow:var(--shadow);
+}
+
+.panel span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.panel h3{
+font-size:32px;
+line-height:1.05;
+margin-bottom:14px;
+}
+
+.panel p{
+color:var(--soft);
+font-size:18px;
+}
+
+.town-section{
+background:var(--charcoal2);
+}
+
+.town-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.town-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.town-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.town-card h3{
+font-size:24px;
+line-height:1.1;
+margin-bottom:10px;
+}
+
+.town-card p{
+color:var(--soft);
+}
+
+.county-section{
+background:#0e1211;
+}
+
+.county-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:18px;
+}
+
+.county-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+}
+
+.county-card h3{
+font-size:23px;
+line-height:1.1;
+margin-bottom:10px;
+}
+
+.county-card p{
+color:var(--soft);
+}
+
+.range-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.range-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:34px;
+align-items:start;
+}
+
+.range-box{
+background:rgba(255,255,255,.07);
+border:1px solid var(--line);
+border-radius:28px;
+padding:34px;
+box-shadow:var(--shadow);
+}
+
+.range-box h3{
+font-size:34px;
+line-height:1.05;
+margin-bottom:16px;
+}
+
+.range-box p{
+font-size:18px;
+color:var(--soft);
+}
+
+.service-section{
+background:var(--charcoal2);
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.service-card{
+display:block;
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:26px;
+padding:28px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.service-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.service-card span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.service-card h3{
+font-size:27px;
+line-height:1.05;
+margin-bottom:12px;
+}
+
+.service-card p{
+color:var(--soft);
+margin-bottom:18px;
+}
+
+.learn-more{
+font-weight:900;
+color:var(--accent);
+letter-spacing:.5px;
+transition:.25s;
+}
+
+.service-card:hover .learn-more{
+transform:translateX(8px);
+color:white;
+}
+
+.note-section{
+background:#0e1211;
+}
+
+.note-box{
+background:linear-gradient(135deg,rgba(32,59,45,.86),rgba(32,39,36,.94));
+border:1px solid var(--line);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+}
+
+.note-box h2{
+font-size:clamp(38px,5vw,64px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.note-box p{
+font-size:20px;
+color:var(--soft);
+max-width:900px;
+}
+
+.faq-section{
+background:var(--charcoal2);
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
+.final-cta{
+background:
+linear-gradient(rgba(16,20,19,.78),rgba(16,20,19,.9)),
+url("assets/projects/project-13.jpg");
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:110px 0;
+}
+
+.final-cta h2{
+font-size:clamp(44px,6vw,84px);
+line-height:.92;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.final-cta p{
+font-size:21px;
+color:var(--soft);
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+background:transparent;
+padding:0;
+border:none;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{color:white;}
+
+@media(max-width:980px){
+
+header{position:relative;}
+
+.nav{
+flex-direction:column;
+padding:12px 0 16px;
+}
+
+.logo img{height:82px;}
+
+.nav-links,
+.nav-actions,
+.hero-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:-1px;
+}
+
+.hero p{font-size:18px;}
+
+.section-head{display:block;}
+
+.section-head h2{margin-bottom:16px;}
+
+.base-grid,
+.town-grid,
+.county-grid,
+.range-grid,
+.service-grid,
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+section{padding:64px 0;}
+
+.footer-logo-box img{max-width:300px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="kicker">Based in Notasulga • Serving Central Alabama</div>
+
+<h1>Land Work Across Central Alabama.</h1>
+
+<p>
+Wolf Creek Farms is based in Notasulga and serves property owners across East Central and Central Alabama with land clearing, land preparation, road building, drainage, house pads, pond building, demolition, clay gravel, and hunting land development.
+</p>
+
+<div class="hero-buttons">
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+<a href="#core-areas" class="btn btn-ghost">View Service Area</a>
+</div>
+
+</div>
+</section>
+
+<section class="base-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Based in Notasulga</h2>
+<p>
+Wolf Creek Farms is centrally located for landowners across Macon, Lee, Tallapoosa, Elmore, Montgomery, and nearby counties.
+</p>
+</div>
+
+<div class="base-grid">
+
+<div class="panel">
+<span>Home Base</span>
+<h3>Notasulga, Alabama</h3>
+<p>
+Being based in Notasulga gives Wolf Creek Farms practical access to Auburn, Opelika, Tuskegee, Tallassee, Lake Martin, Montgomery, Wetumpka, and surrounding rural areas.
+</p>
+</div>
+
+<div class="panel">
+<span>Travel Range</span>
+<h3>Central Alabama Projects</h3>
+<p>
+Russ will travel when the job is the right fit. Most work should fall within a practical range between Montgomery, Alexander City, Union Springs, Valley, and surrounding communities.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="town-section" id="core-areas">
+<div class="container">
+
+<div class="section-head">
+<h2>Core Service Areas</h2>
+<p>
+These are the main towns and communities Wolf Creek Farms expects to serve most often.
+</p>
+</div>
+
+<div class="town-grid">
+
+<div class="town-card">
+<h3>Notasulga</h3>
+<p>Home base for Wolf Creek Farms and nearby rural property work.</p>
+</div>
+
+<div class="town-card">
+<h3>Tallassee</h3>
+<p>Land clearing, road building, drainage, clay gravel, and rural site work.</p>
+</div>
+
+<div class="town-card">
+<h3>Auburn</h3>
+<p>Homesites, driveways, drainage, land prep, and property improvements.</p>
+</div>
+
+<div class="town-card">
+<h3>Opelika</h3>
+<p>Road access, clearing, land prep, drainage, and rural property projects.</p>
+</div>
+
+<div class="town-card">
+<h3>Tuskegee</h3>
+<p>Land management, site prep, hunting land, road work, and property cleanup.</p>
+</div>
+
+<div class="town-card">
+<h3>Lake Martin</h3>
+<p>Premium rural property, lake-area access, drainage, clearing, and site preparation.</p>
+</div>
+
+<div class="town-card">
+<h3>Montgomery</h3>
+<p>Larger land clearing, road building, drainage, demolition, and site work projects.</p>
+</div>
+
+<div class="town-card">
+<h3>Wetumpka</h3>
+<p>Rural property, driveway repair, drainage, homesite prep, and land improvement.</p>
+</div>
+
+<div class="town-card">
+<h3>Eclectic</h3>
+<p>Property access, clearing, pond work, hunting land, and rural site work.</p>
+</div>
+
+<div class="town-card">
+<h3>Shorter</h3>
+<p>Land preparation, road access, clearing, drainage, and property improvement.</p>
+</div>
+
+<div class="town-card">
+<h3>Pike Road</h3>
+<p>Homesites, rural property, drainage, road building, and land preparation.</p>
+</div>
+
+<div class="town-card">
+<h3>Surrounding Areas</h3>
+<p>Nearby communities may be considered based on job size, scope, and schedule.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="county-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Counties Served</h2>
+<p>
+Wolf Creek Farms focuses on Central Alabama counties where the travel, project size, and scope make sense.
+</p>
+</div>
+
+<div class="county-grid">
+
+<div class="county-card">
+<h3>Macon County</h3>
+<p>Notasulga, Tuskegee, Shorter, and surrounding rural properties.</p>
+</div>
+
+<div class="county-card">
+<h3>Lee County</h3>
+<p>Auburn, Opelika, rural homesites, farms, and land development projects.</p>
+</div>
+
+<div class="county-card">
+<h3>Tallapoosa County</h3>
+<p>Tallassee, Lake Martin area, rural land, hunting property, and roads.</p>
+</div>
+
+<div class="county-card">
+<h3>Elmore County</h3>
+<p>Wetumpka, Eclectic, lake-area property, rural sites, and drainage work.</p>
+</div>
+
+<div class="county-card">
+<h3>Montgomery County</h3>
+<p>Montgomery, Pike Road, larger land clearing, site work, and access projects.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="range-section">
+<div class="container range-grid">
+
+<div class="range-box">
+<div class="kicker">Practical Travel Range</div>
+<h3>Montgomery to Alexander City, Union Springs to Valley</h3>
+<p>
+As a general rule, Wolf Creek Farms can consider jobs within the Central Alabama range of Montgomery, Alexander City, Union Springs, Valley, and the communities between them.
+</p>
+</div>
+
+<div class="range-box">
+<div class="kicker">Larger Projects</div>
+<h3>Outside the Area? Still Ask.</h3>
+<p>
+Larger projects may be considered outside the normal service area depending on the scope, schedule, travel distance, and type of work needed.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="service-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Services Across the Area</h2>
+<p>
+These are the core services Wolf Creek Farms provides throughout the service area.
+</p>
+</div>
+
+<div class="service-grid">
+
+<a href="land-clearing.html" class="service-card">
+<span>Clearing</span>
+<h3>Land Clearing</h3>
+<p>Brush, overgrowth, small trees, homesites, trails, and rough property areas.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="land-preparation.html" class="service-card">
+<span>Site Prep</span>
+<h3>Land Preparation</h3>
+<p>Homesites, shops, barns, RV lots, food plots, driveways, and future construction.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="road-building.html" class="service-card">
+<span>Access</span>
+<h3>Road Building</h3>
+<p>Driveways, farm roads, hunting roads, access roads, repair, grading, and clay gravel.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="drainage.html" class="service-card">
+<span>Water Flow</span>
+<h3>Drainage</h3>
+<p>Washout repair, erosion control, culvert support, ditch shaping, and grading.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="house-pads.html" class="service-card">
+<span>Building Prep</span>
+<h3>House Pads</h3>
+<p>Homes, cabins, shops, barns, mobile homes, RV lots, and pad preparation.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="pond-building.html" class="service-card">
+<span>Water Projects</span>
+<h3>Pond Building</h3>
+<p>Pond construction, pond repair, expansion, shoreline shaping, and water projects.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="demolition.html" class="service-card">
+<span>Removal</span>
+<h3>Demolition</h3>
+<p>Small structure removal, debris cleanup, hauling, and site preparation.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="clay-gravel.html" class="service-card">
+<span>Materials</span>
+<h3>Clay Gravel</h3>
+<p>Delivery, spreading, driveway repair, road base, access improvement, and grading.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+<a href="hunting-land-development.html" class="service-card">
+<span>Rural Property</span>
+<h3>Hunting Land Development</h3>
+<p>Food plots, fire breaks, shooting lanes, hunting roads, and property improvements.</p>
+<div class="learn-more">View Service →</div>
+</a>
+
+</div>
+
+</div>
+</section>
+
+<section class="note-section">
+<div class="container">
+
+<div class="note-box">
+<h2>Service Area Depends on the Job.</h2>
+<p>
+Small jobs generally need to be closer to the Notasulga area. Larger land clearing, road building, drainage, pond, demolition, or site development projects may justify more travel if the scope makes sense.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Service Area Questions</h2>
+<p>
+A few common questions about where Wolf Creek Farms works and when travel makes sense.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>Where is Wolf Creek Farms based?</h3>
+<p>Wolf Creek Farms is based in Notasulga, Alabama.</p>
+</div>
+
+<div class="faq-item">
+<h3>How far will Russ travel?</h3>
+<p>Russ will travel when the job is the right fit. The normal practical range includes Central Alabama communities between Montgomery, Alexander City, Union Springs, and Valley.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you work in Auburn and Opelika?</h3>
+<p>Yes. Auburn and Opelika are part of the core service area.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you work around Lake Martin?</h3>
+<p>Yes. Lake Martin area projects may be a strong fit, especially larger land, access, drainage, pond, and site preparation jobs.</p>
+</div>
+
+<div class="faq-item">
+<h3>Will you consider a job outside the listed area?</h3>
+<p>Yes, larger projects may be considered outside the normal area depending on scope, travel, and schedule.</p>
+</div>
+
+<div class="faq-item">
+<h3>How do I know if my property is in range?</h3>
+<p>Call 334-207-3331 or submit an estimate request with the property location.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+
+<h2>Need Land Work in Central Alabama?</h2>
+
+<p>
+Send the property location, service needed, and project details. Wolf Creek Farms will let you know if the job is a good fit.
+</p>
+
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
