@@ -1,1 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>House Pads & Site Preparation | Wolf Creek Farms</title>
+
+<meta name="description" content="Wolf Creek Farms provides house pads, homesite preparation, shop pads, barn pads, mobile home pads, RV lots, grading, fill, drainage, and land preparation across East Central Alabama.">
+
+<style>
+:root{
+--hunter:#203b2d;
+--hunter2:#2f5a3f;
+--charcoal:#101413;
+--charcoal2:#171d1b;
+--panel:#202724;
+--white:#ffffff;
+--soft:#d7ded2;
+--muted:#aeb8aa;
+--accent:#91aa6d;
+--line:rgba(255,255,255,.14);
+--shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+font-weight:900;
+transition:.25s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{background:var(--hunter2);color:white;}
+.btn-secondary{background:white;color:var(--charcoal);}
+.btn-ghost{border-color:var(--line);color:white;background:rgba(255,255,255,.08);}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{color:var(--accent);}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:end;
+background:
+linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.70),rgba(16,20,19,.28)),
+linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
+url("assets/projects/project-1.jpg");
+background-size:cover;
+background-position:center;
+padding:160px 0 82px;
+}
+
+.kicker{
+color:var(--accent);
+font-size:14px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(52px,7vw,96px);
+line-height:.9;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin-bottom:22px;
+max-width:900px;
+}
+
+.hero p{
+font-size:21px;
+max-width:720px;
+color:#edf3ea;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:28px;
+margin-bottom:42px;
+}
+
+.section-head h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+}
+
+.section-head p{
+max-width:570px;
+font-size:19px;
+color:var(--soft);
+}
+
+.overview{
+background:#0e1211;
+}
+
+.overview-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.panel{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px;
+box-shadow:var(--shadow);
+}
+
+.panel h3{
+font-size:30px;
+line-height:1.05;
+margin-bottom:14px;
+}
+
+.panel p{
+color:var(--soft);
+font-size:18px;
+}
+
+.image-feature{
+background:var(--charcoal2);
+}
+
+.image-feature-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:32px;
+align-items:center;
+}
+
+.image-feature img{
+height:440px;
+width:100%;
+object-fit:cover;
+border-radius:30px;
+box-shadow:var(--shadow);
+}
+
+.image-feature-copy h2{
+font-size:clamp(40px,5vw,68px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.image-feature-copy p{
+font-size:20px;
+color:var(--soft);
+margin-bottom:22px;
+}
+
+.pad-section{
+background:#0e1211;
+}
+
+.pad-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.pad-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:26px;
+padding:28px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.pad-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.pad-card span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.pad-card h3{
+font-size:27px;
+line-height:1.05;
+margin-bottom:12px;
+}
+
+.pad-card p{
+color:var(--soft);
+}
+
+.gallery-section{
+background:var(--charcoal2);
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:1.2fr .8fr .8fr;
+gap:18px;
+}
+
+.gallery-grid img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:24px;
+box-shadow:var(--shadow);
+}
+
+.gallery-grid img:first-child{
+grid-row:span 2;
+height:538px;
+}
+
+.process-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+background:rgba(255,255,255,.07);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+}
+
+.step-number{
+font-size:48px;
+line-height:1;
+font-weight:950;
+color:var(--accent);
+margin-bottom:18px;
+}
+
+.step h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.step p{
+color:var(--soft);
+}
+
+.note-section{
+background:var(--charcoal2);
+}
+
+.note-box{
+background:linear-gradient(135deg,rgba(32,59,45,.86),rgba(32,39,36,.94));
+border:1px solid var(--line);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+}
+
+.note-box h2{
+font-size:clamp(38px,5vw,64px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.note-box p{
+font-size:20px;
+color:var(--soft);
+max-width:880px;
+}
+
+.faq-section{
+background:#0e1211;
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
+.final-cta{
+background:
+linear-gradient(rgba(16,20,19,.78),rgba(16,20,19,.9)),
+url("assets/projects/project-13.jpg");
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:110px 0;
+}
+
+.final-cta h2{
+font-size:clamp(44px,6vw,84px);
+line-height:.92;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.final-cta p{
+font-size:21px;
+color:var(--soft);
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+background:transparent;
+padding:0;
+border:none;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{color:white;}
+
+@media(max-width:980px){
+
+header{
+position:relative;
+}
+
+.nav{
+flex-direction:column;
+padding:12px 0 16px;
+}
+
+.logo img{
+height:82px;
+}
+
+.nav-links,
+.nav-actions,
+.hero-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-head{
+display:block;
+}
+
+.section-head h2{
+margin-bottom:16px;
+}
+
+.overview-grid,
+.image-feature-grid,
+.pad-grid,
+.gallery-grid,
+.process-grid,
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+.image-feature img,
+.gallery-grid img,
+.gallery-grid img:first-child{
+height:310px;
+grid-row:auto;
+}
+
+section{
+padding:64px 0;
+}
+
+.footer-logo-box img{
+max-width:300px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="kicker">House Pads • Homesites • Shops • RV Lots</div>
+
+<h1>Build on a Site That Starts Right.</h1>
+
+<p>
+Wolf Creek Farms prepares house pads, shop pads, barn pads, mobile home sites, cabins, RV lots, and rural building areas with clearing, grading, fill, and drainage in mind.
+</p>
+
+<div class="hero-buttons">
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+<a href="#pad-services" class="btn btn-ghost">View Pad Services</a>
+</div>
+
+</div>
+</section>
+
+<section class="overview">
+<div class="container">
+
+<div class="section-head">
+<h2>House Pads & Site Preparation</h2>
+<p>
+A strong building site starts before the first load of material. The ground needs to be cleared, shaped, built up, and drained properly.
+</p>
+</div>
+
+<div class="overview-grid">
+
+<div class="panel">
+<h3>Prepared for the Build</h3>
+<p>
+House pad work includes clearing the area, shaping the site, managing slope, adding or moving material, and preparing the ground for the next phase of construction.
+</p>
+</div>
+
+<div class="panel">
+<h3>Water Matters</h3>
+<p>
+A pad that holds water or drains toward the wrong area creates problems. Good site prep considers slope, runoff, access, and long-term use.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="image-feature">
+<div class="container image-feature-grid">
+
+<div>
+<img src="assets/projects/project-2.jpg" alt="House pad and building site preparation by Wolf Creek Farms">
+</div>
+
+<div class="image-feature-copy">
+<div class="kicker">Site Prep That Makes Sense</div>
+<h2>Get the Land Ready Before the Build Starts.</h2>
+<p>
+Homes, shops, barns, cabins, and RV lots all need solid access, proper drainage, and clean ground before construction or setup begins.
+</p>
+
+<div class="checks">
+<div>✓ Clear the building area</div>
+<div>✓ Shape and grade the site</div>
+<div>✓ Improve access</div>
+<div>✓ Prepare for future use</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="pad-section" id="pad-services">
+<div class="container">
+
+<div class="section-head">
+<h2>Pad & Site Prep Services</h2>
+<p>
+Wolf Creek Farms helps prepare residential, rural, farm, hunting, and commercial property for future building or setup.
+</p>
+</div>
+
+<div class="pad-grid">
+
+<div class="pad-card">
+<span>Residential</span>
+<h3>House Pads</h3>
+<p>Prepare building areas for homes by clearing, shaping, filling, and grading the site.</p>
+</div>
+
+<div class="pad-card">
+<span>Rural Living</span>
+<h3>Cabin Pads</h3>
+<p>Site preparation for cabins, weekend properties, hunting camps, and rural retreats.</p>
+</div>
+
+<div class="pad-card">
+<span>Outbuildings</span>
+<h3>Shop Pads</h3>
+<p>Prep land for shops, garages, equipment buildings, sheds, and work areas.</p>
+</div>
+
+<div class="pad-card">
+<span>Farm Use</span>
+<h3>Barn Pads</h3>
+<p>Prepare stable areas for barns, farm buildings, storage buildings, and working spaces.</p>
+</div>
+
+<div class="pad-card">
+<span>Setup Areas</span>
+<h3>Mobile Home Pads</h3>
+<p>Clear, shape, and prepare sites for mobile homes and manufactured housing setup.</p>
+</div>
+
+<div class="pad-card">
+<span>Access</span>
+<h3>RV Lots</h3>
+<p>Prepare RV lots, camper pads, parking areas, and access routes for recreational use.</p>
+</div>
+
+<div class="pad-card">
+<span>Material</span>
+<h3>Fill & Grading</h3>
+<p>Move material, raise low spots, improve slope, and shape the site for better use.</p>
+</div>
+
+<div class="pad-card">
+<span>Water Control</span>
+<h3>Pad Drainage</h3>
+<p>Direct water away from the pad and help reduce long-term washout or pooling issues.</p>
+</div>
+
+<div class="pad-card">
+<span>Future Build</span>
+<h3>Build-Ready Prep</h3>
+<p>Prepare the surrounding area for access, material delivery, construction, and next steps.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="gallery-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Site Prep in Progress</h2>
+<p>
+These photos show the type of clearing, shaping, grading, and land preparation that supports house pads and building sites.
+</p>
+</div>
+
+<div class="gallery-grid">
+<img src="assets/projects/project-1.jpg" alt="House pad preparation by Wolf Creek Farms">
+<img src="assets/projects/project-2.jpg" alt="Building site preparation by Wolf Creek Farms">
+<img src="assets/projects/project-4.jpg" alt="Land preparation for future building">
+<img src="assets/projects/project-13.jpg" alt="Graded land and site preparation">
+<img src="assets/projects/project-1.jpg" alt="Prepared house pad area">
+</div>
+
+</div>
+</section>
+
+<section class="process-section">
+<div class="container">
+
+<div class="section-head">
+<h2>How House Pad Jobs Work</h2>
+<p>
+A better pad starts with understanding the land, the future build, and how the site needs to function.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Review the Site</h3>
+<p>We look at access, slope, soil, clearing needs, drainage, and the intended structure.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Prepare the Area</h3>
+<p>The building area is cleared, opened up, cleaned, and shaped for equipment access.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Build & Grade</h3>
+<p>Material is moved, added, graded, and shaped to create a usable pad area.</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Plan for Water</h3>
+<p>The site is shaped to help water move away from the pad and surrounding work area.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="note-section">
+<div class="container">
+
+<div class="note-box">
+<h2>A Good Pad Should Work With the Land, Not Fight It.</h2>
+<p>
+The best pad is not only level. It also needs access, water control, enough working room, and a clear plan for how the property will be used after construction.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Questions</h2>
+<p>
+A few common questions about house pads, site preparation, grading, fill, drainage, and rural building sites.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>Can you prepare a house pad?</h3>
+<p>Yes. Wolf Creek Farms can clear, shape, fill, and grade areas for house pads and homesites.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you prepare shop or barn pads?</h3>
+<p>Yes. Shop pads, barn pads, storage building pads, and equipment areas can be prepared.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you handle RV lots?</h3>
+<p>Yes. Wolf Creek Farms can prepare RV lots, camper pads, access routes, and parking areas.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you fix drainage around a pad?</h3>
+<p>Yes. Site prep can include shaping the land so water moves away from the pad and work area.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide material?</h3>
+<p>Material needs depend on the site. Wolf Creek Farms can discuss fill, clay gravel, and other material options during the estimate.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide free estimates?</h3>
+<p>Yes. Call 334-207-3331 or request an estimate online.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+
+<h2>Need a Pad or Homesite Prepared?</h2>
+
+<p>
+From homes and shops to barns, cabins, mobile homes, and RV lots, Wolf Creek Farms can help get your site ready.
+</p>
+
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
