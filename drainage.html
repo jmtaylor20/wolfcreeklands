@@ -1,1 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Drainage Solutions & Erosion Control | Wolf Creek Farms</title>
+
+<meta name="description" content="Wolf Creek Farms provides drainage solutions, erosion control, washout repair, culvert work, ditch shaping, grading, rip rap installation, and water flow improvements across East Central Alabama.">
+
+<style>
+:root{
+--hunter:#203b2d;
+--hunter2:#2f5a3f;
+--charcoal:#101413;
+--charcoal2:#171d1b;
+--panel:#202724;
+--white:#ffffff;
+--soft:#d7ded2;
+--muted:#aeb8aa;
+--accent:#91aa6d;
+--line:rgba(255,255,255,.14);
+--shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+font-weight:900;
+transition:.25s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{
+background:var(--hunter2);
+color:white;
+}
+
+.btn-secondary{
+background:white;
+color:var(--charcoal);
+}
+
+.btn-ghost{
+border-color:var(--line);
+color:white;
+background:rgba(255,255,255,.08);
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{color:var(--accent);}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:end;
+background:
+linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.70),rgba(16,20,19,.28)),
+linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
+url("assets/projects/project-9.jpg");
+background-size:cover;
+background-position:center;
+padding:160px 0 82px;
+}
+
+.kicker{
+color:var(--accent);
+font-size:14px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(52px,7vw,96px);
+line-height:.9;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin-bottom:22px;
+max-width:900px;
+}
+
+.hero p{
+font-size:21px;
+max-width:720px;
+color:#edf3ea;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:28px;
+margin-bottom:42px;
+}
+
+.section-head h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+}
+
+.section-head p{
+max-width:570px;
+font-size:19px;
+color:var(--soft);
+}
+
+.overview{
+background:#0e1211;
+}
+
+.overview-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.panel{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px;
+box-shadow:var(--shadow);
+}
+
+.panel h3{
+font-size:30px;
+line-height:1.05;
+margin-bottom:14px;
+}
+
+.panel p{
+color:var(--soft);
+font-size:18px;
+}
+
+.image-feature{
+background:var(--charcoal2);
+}
+
+.image-feature-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:32px;
+align-items:center;
+}
+
+.image-feature img{
+height:440px;
+width:100%;
+object-fit:cover;
+border-radius:30px;
+box-shadow:var(--shadow);
+}
+
+.image-feature-copy h2{
+font-size:clamp(40px,5vw,68px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.image-feature-copy p{
+font-size:20px;
+color:var(--soft);
+margin-bottom:22px;
+}
+
+.drainage-section{
+background:#0e1211;
+}
+
+.drainage-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.drainage-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:26px;
+padding:28px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.drainage-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.drainage-card span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.drainage-card h3{
+font-size:27px;
+line-height:1.05;
+margin-bottom:12px;
+}
+
+.drainage-card p{
+color:var(--soft);
+}
+
+.problem-section{
+background:var(--charcoal2);
+}
+
+.problem-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.problem-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+}
+
+.problem-card h3{
+font-size:23px;
+line-height:1.1;
+margin-bottom:12px;
+}
+
+.problem-card p{
+color:var(--soft);
+}
+
+.process-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+background:rgba(255,255,255,.07);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+}
+
+.step-number{
+font-size:48px;
+line-height:1;
+font-weight:950;
+color:var(--accent);
+margin-bottom:18px;
+}
+
+.step h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.step p{
+color:var(--soft);
+}
+
+.note-section{
+background:var(--charcoal2);
+}
+
+.note-box{
+background:linear-gradient(135deg,rgba(32,59,45,.86),rgba(32,39,36,.94));
+border:1px solid var(--line);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+}
+
+.note-box h2{
+font-size:clamp(38px,5vw,64px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.note-box p{
+font-size:20px;
+color:var(--soft);
+max-width:880px;
+}
+
+.faq-section{
+background:#0e1211;
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
+.final-cta{
+background:
+linear-gradient(rgba(16,20,19,.78),rgba(16,20,19,.9)),
+url("assets/projects/project-8.jpg");
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:110px 0;
+}
+
+.final-cta h2{
+font-size:clamp(44px,6vw,84px);
+line-height:.92;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.final-cta p{
+font-size:21px;
+color:var(--soft);
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+background:transparent;
+padding:0;
+border:none;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{color:white;}
+
+@media(max-width:980px){
+
+header{
+position:relative;
+}
+
+.nav{
+flex-direction:column;
+padding:12px 0 16px;
+}
+
+.logo img{
+height:82px;
+}
+
+.nav-links,
+.nav-actions,
+.hero-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-head{
+display:block;
+}
+
+.section-head h2{
+margin-bottom:16px;
+}
+
+.overview-grid,
+.image-feature-grid,
+.drainage-grid,
+.problem-grid,
+.process-grid,
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+.image-feature img{
+height:310px;
+}
+
+section{
+padding:64px 0;
+}
+
+.footer-logo-box img{
+max-width:300px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="kicker">Drainage • Erosion Control • Washout Repair</div>
+
+<h1>Fix Water Problems Before They Damage Your Property.</h1>
+
+<p>
+Wolf Creek Farms helps landowners improve water flow, repair washouts, control erosion, shape ditches, stabilize culverts, and protect rural property from drainage problems.
+</p>
+
+<div class="hero-buttons">
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+<a href="#drainage-services" class="btn btn-ghost">View Drainage Services</a>
+</div>
+
+</div>
+</section>
+
+<section class="overview">
+<div class="container">
+
+<div class="section-head">
+<h2>Drainage Solutions</h2>
+<p>
+Water always finds a path. The job is to shape that path before it causes ruts, washouts, standing water, erosion, and long-term property damage.
+</p>
+</div>
+
+<div class="overview-grid">
+
+<div class="panel">
+<h3>Better Water Flow</h3>
+<p>
+Drainage work focuses on moving water where it needs to go. That may include grading, ditch shaping, culvert support, rip rap, swales, or correcting low areas.
+</p>
+</div>
+
+<div class="panel">
+<h3>Protect the Property</h3>
+<p>
+Poor drainage can damage driveways, roads, yards, slopes, culverts, house pads, fields, and access points. A drainage fix should solve the source, not hide the symptom.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="image-feature">
+<div class="container image-feature-grid">
+
+<div>
+<img src="assets/projects/project-8.jpg" alt="Drainage work and erosion control by Wolf Creek Farms">
+</div>
+
+<div class="image-feature-copy">
+<div class="kicker">Project-Focused Drainage</div>
+<h2>Drainage Work Has to Fit the Land.</h2>
+<p>
+Every property moves water differently. Slope, soil, traffic, road base, existing ditches, and culverts all affect the right solution.
+</p>
+
+<div class="checks">
+<div>✓ Control runoff</div>
+<div>✓ Reduce erosion</div>
+<div>✓ Repair washouts</div>
+<div>✓ Improve road access</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="drainage-section" id="drainage-services">
+<div class="container">
+
+<div class="section-head">
+<h2>Drainage Services</h2>
+<p>
+Wolf Creek Farms can help with drainage corrections, water flow improvements, erosion repair, and site shaping for homesites, farms, driveways, roads, and rural property.
+</p>
+</div>
+
+<div class="drainage-grid">
+
+<div class="drainage-card">
+<span>Water Flow</span>
+<h3>Drainage Correction</h3>
+<p>Improve how water moves across your property so it does not collect, cut, or damage key areas.</p>
+</div>
+
+<div class="drainage-card">
+<span>Repair</span>
+<h3>Washout Repair</h3>
+<p>Fix damaged driveways, roads, ditches, slopes, and access points caused by uncontrolled water.</p>
+</div>
+
+<div class="drainage-card">
+<span>Protection</span>
+<h3>Erosion Control</h3>
+<p>Stabilize areas where soil is washing away and protect the land from repeated damage.</p>
+</div>
+
+<div class="drainage-card">
+<span>Culverts</span>
+<h3>Culvert Support</h3>
+<p>Improve water flow around culverts, entrances, road crossings, ditches, and low areas.</p>
+</div>
+
+<div class="drainage-card">
+<span>Ditches</span>
+<h3>Ditch Shaping</h3>
+<p>Shape and clean ditch lines so water moves properly instead of cutting across roads or driveways.</p>
+</div>
+
+<div class="drainage-card">
+<span>Rock Work</span>
+<h3>Rip Rap Placement</h3>
+<p>Use larger rock to stabilize culvert ends, ditch outlets, slopes, banks, and washout-prone areas.</p>
+</div>
+
+<div class="drainage-card">
+<span>Site Work</span>
+<h3>Grading for Drainage</h3>
+<p>Shape the land to guide water away from structures, pads, roads, and high-use areas.</p>
+</div>
+
+<div class="drainage-card">
+<span>Roads</span>
+<h3>Driveway Drainage</h3>
+<p>Improve driveway slope, road base, ditch lines, water crossings, and runoff control.</p>
+</div>
+
+<div class="drainage-card">
+<span>Land</span>
+<h3>Low Area Correction</h3>
+<p>Address problem areas where water sits, softens the ground, or makes the property hard to use.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="problem-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Problems We Help Solve</h2>
+<p>
+Most drainage problems start small, then get expensive when they keep coming back after every heavy rain.
+</p>
+</div>
+
+<div class="problem-grid">
+
+<div class="problem-card">
+<h3>Standing Water</h3>
+<p>Low spots, poor grading, and blocked flow can leave water sitting where it should not.</p>
+</div>
+
+<div class="problem-card">
+<h3>Driveway Washouts</h3>
+<p>Water crossing a road or driveway can cut ruts, expose base, and ruin access.</p>
+</div>
+
+<div class="problem-card">
+<h3>Erosion</h3>
+<p>Uncontrolled runoff can remove soil, undermine banks, and damage slopes.</p>
+</div>
+
+<div class="problem-card">
+<h3>Culvert Issues</h3>
+<p>Culverts need stable material and proper water flow to keep entrances and roads usable.</p>
+</div>
+
+<div class="problem-card">
+<h3>Soft Roads</h3>
+<p>Water trapped in road base can weaken access roads and create long-term maintenance problems.</p>
+</div>
+
+<div class="problem-card">
+<h3>Yard Damage</h3>
+<p>Bad drainage can create muddy areas, channels, standing water, and poor grass growth.</p>
+</div>
+
+<div class="problem-card">
+<h3>Pad Protection</h3>
+<p>House pads, shops, barns, and RV lots need water directed away from the prepared area.</p>
+</div>
+
+<div class="problem-card">
+<h3>Farm Access</h3>
+<p>Drainage affects gates, lanes, barns, fields, equipment access, and rural working areas.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="process-section">
+<div class="container">
+
+<div class="section-head">
+<h2>How Drainage Jobs Work</h2>
+<p>
+The right drainage plan starts with understanding where the water comes from, where it goes, and what it damages.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Evaluate the Water</h3>
+<p>We look at slope, runoff, low spots, erosion, culverts, roads, and damaged areas.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Plan the Fix</h3>
+<p>We determine the grading, material, ditch, rock, or culvert support needed.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Shape the Land</h3>
+<p>The site is cut, filled, graded, stabilized, or shaped to improve water movement.</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Protect the Area</h3>
+<p>Material may be added to strengthen the surface and reduce future washout problems.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="note-section">
+<div class="container">
+
+<div class="note-box">
+<h2>Drainage Problems Usually Come Back Until the Water Has a Better Place to Go.</h2>
+<p>
+Adding material can help, but it may not solve the source. Wolf Creek Farms looks at water movement, slope, road base, soil, and access so the fix matches the land.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Questions</h2>
+<p>
+A few common questions about drainage work, washout repair, erosion control, and water flow improvements.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>Can you fix driveway washouts?</h3>
+<p>Yes. Wolf Creek Farms can repair washouts and improve the road or driveway so water moves better.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you install rip rap?</h3>
+<p>Yes. Rip rap can help stabilize culvert ends, ditches, slopes, and areas where water causes erosion.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you improve water flow around culverts?</h3>
+<p>Yes. Culvert areas often need shaping, stabilization, proper material, and better water control.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can grading help drainage?</h3>
+<p>Yes. Proper grading can direct water away from structures, roads, pads, yards, and high-use areas.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you fix standing water?</h3>
+<p>Often, yes. Standing water may require grading, fill, ditch shaping, drainage rock, or changing how water leaves the area.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide free estimates?</h3>
+<p>Yes. Call 334-207-3331 or request an estimate online.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+
+<h2>Need to Fix a Drainage Problem?</h2>
+
+<p>
+From washouts and erosion to culverts, ditches, grading, and water flow improvements, Wolf Creek Farms can help protect and improve your property.
+</p>
+
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
