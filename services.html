@@ -208,23 +208,55 @@ gap:22px;
 }
 
 .service-card{
-background:var(--panel);
-border:1px solid var(--line);
-border-radius:28px;
-overflow:hidden;
-box-shadow:var(--shadow);
-transition:.25s;
+    position:relative;
+    display:block;
+    overflow:hidden;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:28px;
+    box-shadow:var(--shadow);
+    transition:.35s ease;
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.18),
+        rgba(0,0,0,0)
+    );
+    opacity:0;
+    transition:.35s ease;
+    z-index:1;
 }
 
 .service-card:hover{
-transform:translateY(-6px);
-border-color:rgba(145,170,109,.45);
+    transform:translateY(-8px);
+    border-color:rgba(145,170,109,.45);
+    box-shadow:0 32px 70px rgba(0,0,0,.45);
+}
+
+.service-card:hover::before{
+    opacity:1;
+}
+
+.service-card:hover img{
+    transform:scale(1.04);
+}
+
+.service-content{
+    position:relative;
+    z-index:2;
+    padding:26px;
 }
 
 .service-card img{
-width:100%;
-height:245px;
-object-fit:cover;
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    transition:.45s ease;
 }
 
 .service-content{
@@ -538,7 +570,7 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 
 <div class="service-grid">
 
-<div class="service-card">
+<a href="land-clearing.html" class="service-card">
 <img src="assets/equipment/wolf-creek-dozer.jpg" alt="Land clearing by Wolf Creek Farms">
 <div class="service-content">
 <span>Clearing</span>
@@ -546,29 +578,29 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <p>Remove brush, small trees, undergrowth, overgrowth, and unwanted vegetation to prepare your property for its next use.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
-<img src="assets/projects/project-3.jpg" alt="Land preparation project">
+<a href="land-preparation.html" class="service-card">
+<img src="assets/projects/project-4.jpg" alt="Land preparation project">
 <div class="service-content">
 <span>Site Prep</span>
 <h3>Land Preparation</h3>
 <p>Prepare land for homes, shops, barns, food plots, access roads, RV lots, and future construction.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
-<img src="assets/equipment/wolf-creek-dump-truck.jpg" alt="Road building and clay gravel">
+<a href="road-building.html" class="service-card">
+<img src="assets/projects/project-11.jpg" alt="Road building project completed by Wolf Creek Farms">
 <div class="service-content">
 <span>Access</span>
 <h3>Road Building</h3>
 <p>Build farm roads, hunting roads, driveways, and access roads with proper grading and clay gravel support.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
+<a href="drainage.html" class="service-card">
 <img src="assets/projects/project-9.jpg" alt="Drainage and site work">
 <div class="service-content">
 <span>Water Flow</span>
@@ -576,19 +608,19 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <p>Solve drainage problems, improve water flow, reduce erosion, and protect your property from washouts.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
-<img src="assets/projects/project-5.jpg" alt="House pad preparation">
+<a href="house-pads.html" class="service-card">
+<img src="assets/projects/project-1.jpg" alt="House pad and homesite preparation">
 <div class="service-content">
 <span>Building Prep</span>
 <h3>House Pads</h3>
 <p>Grade and prepare stable building pads for homes, cabins, shops, barns, mobile homes, and future builds.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
+<a href="pond-building.html" class="service-card">
 <img src="assets/projects/project-7.jpg" alt="Pond building project">
 <div class="service-content">
 <span>Water Projects</span>
@@ -596,19 +628,19 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <p>New ponds, pond expansion, pond repair, shoreline improvements, and land shaping around water features.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
-<img src="assets/projects/project-12.jpg" alt="Demolition and cleanup">
+<a href="demolition.html" class="service-card">
+<img src="assets/projects/project-6.jpg" alt="Demolition by Wolf Creek Farms">
 <div class="service-content">
 <span>Removal</span>
 <h3>Demolition</h3>
 <p>Remove old structures, clean up debris, haul material, and prepare the property for new construction or future use.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
+<a href="hunting-land-development.html" class="service-card">
 <img src="assets/equipment/wolf-creek-fpv.jpg" alt="Hunting land development">
 <div class="service-content">
 <span>Rural Property</span>
@@ -616,17 +648,17 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <p>Roads, food plots, shooting lanes, fire breaks, clearing, and property improvements for hunting land.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
-<div class="service-card">
-<img src="assets/projects/project-10.jpg" alt="Clay gravel and grading work">
+<a href="clay-gravel.html" class="service-card">
+<img src="assets/projects/project-10.jpg" alt="Clay, gravel, and other materials grading work">
 <div class="service-content">
 <span>Materials</span>
 <h3>Clay Gravel</h3>
-<p>Clay gravel spreading, driveway repair, road improvements, access repair, and grading for rural property.</p>
+<p>Clay, gravel spreading, driveway repair, road improvements, access repair, and grading for rural property.</p>
 <a href="index.html#estimate" class="btn btn-primary">Get Estimate</a>
 </div>
-</div>
+</a>
 
 </div>
 
