@@ -1,1 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Clay Gravel Delivery & Spreading | Wolf Creek Farms</title>
+
+<meta name="description" content="Wolf Creek Farms provides clay gravel delivery, gravel spreading, driveway repair, road base, fill dirt, topsoil, sand, rip rap, crush and run, and site material services across East Central Alabama.">
+
+<style>
+:root{
+--hunter:#203b2d;
+--hunter2:#2f5a3f;
+--charcoal:#101413;
+--charcoal2:#171d1b;
+--panel:#202724;
+--white:#ffffff;
+--soft:#d7ded2;
+--muted:#aeb8aa;
+--accent:#91aa6d;
+--line:rgba(255,255,255,.14);
+--shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:var(--charcoal);
+color:var(--white);
+line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 24px;
+border-radius:999px;
+font-weight:900;
+transition:.25s;
+border:1px solid transparent;
+}
+
+.btn:hover{transform:translateY(-2px);}
+
+.btn-primary{
+background:var(--hunter2);
+color:white;
+}
+
+.btn-secondary{
+background:white;
+color:var(--charcoal);
+}
+
+.btn-ghost{
+border-color:var(--line);
+color:white;
+background:rgba(255,255,255,.08);
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{color:var(--accent);}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+.hero{
+min-height:78vh;
+display:flex;
+align-items:end;
+background:
+linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.72),rgba(16,20,19,.36)),
+linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
+url("assets/projects/project-10.jpg");
+background-size:cover;
+background-position:center;
+padding:160px 0 82px;
+}
+
+.kicker{
+color:var(--accent);
+font-size:14px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:16px;
+}
+
+.hero h1{
+font-size:clamp(52px,7vw,96px);
+line-height:.9;
+letter-spacing:-3px;
+text-transform:uppercase;
+margin-bottom:22px;
+max-width:900px;
+}
+
+.hero p{
+font-size:21px;
+max-width:720px;
+color:#edf3ea;
+margin-bottom:28px;
+}
+
+.hero-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:28px;
+margin-bottom:42px;
+}
+
+.section-head h2{
+font-size:clamp(42px,5vw,70px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+}
+
+.section-head p{
+max-width:570px;
+font-size:19px;
+color:var(--soft);
+}
+
+.overview{
+background:#0e1211;
+}
+
+.overview-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+align-items:start;
+}
+
+.panel{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px;
+box-shadow:var(--shadow);
+}
+
+.panel h3{
+font-size:30px;
+line-height:1.05;
+margin-bottom:14px;
+}
+
+.panel p{
+color:var(--soft);
+font-size:18px;
+}
+
+.materials-section{
+background:var(--charcoal2);
+}
+
+.material-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.material-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:26px;
+padding:28px;
+box-shadow:var(--shadow);
+transition:.3s ease;
+}
+
+.material-card:hover{
+transform:translateY(-6px);
+border-color:rgba(145,170,109,.45);
+}
+
+.material-card span{
+display:inline-block;
+color:var(--accent);
+font-size:12px;
+font-weight:950;
+letter-spacing:1.5px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.material-card h3{
+font-size:27px;
+line-height:1.05;
+margin-bottom:12px;
+}
+
+.material-card p{
+color:var(--soft);
+}
+
+.uses-section{
+background:#0e1211;
+}
+
+.uses-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.use-card{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+box-shadow:var(--shadow);
+}
+
+.use-card h3{
+font-size:23px;
+line-height:1.1;
+margin-bottom:12px;
+}
+
+.use-card p{
+color:var(--soft);
+}
+
+.process-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+background:rgba(255,255,255,.07);
+border:1px solid var(--line);
+border-radius:24px;
+padding:26px;
+}
+
+.step-number{
+font-size:48px;
+line-height:1;
+font-weight:950;
+color:var(--accent);
+margin-bottom:18px;
+}
+
+.step h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.step p{
+color:var(--soft);
+}
+
+.note-section{
+background:var(--charcoal2);
+}
+
+.note-box{
+background:linear-gradient(135deg,rgba(32,59,45,.86),rgba(32,39,36,.94));
+border:1px solid var(--line);
+border-radius:30px;
+padding:40px;
+box-shadow:var(--shadow);
+}
+
+.note-box h2{
+font-size:clamp(38px,5vw,64px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.note-box p{
+font-size:20px;
+color:var(--soft);
+max-width:880px;
+}
+
+.faq-section{
+background:#0e1211;
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
+.final-cta{
+background:
+linear-gradient(rgba(16,20,19,.78),rgba(16,20,19,.9)),
+url("assets/equipment/wolf-creek-dump-truck.jpg");
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:110px 0;
+}
+
+.final-cta h2{
+font-size:clamp(44px,6vw,84px);
+line-height:.92;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.final-cta p{
+font-size:21px;
+color:var(--soft);
+max-width:760px;
+margin:0 auto 28px;
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+background:transparent;
+padding:0;
+border:none;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{color:white;}
+
+@media(max-width:980px){
+
+header{
+position:relative;
+}
+
+.nav{
+flex-direction:column;
+padding:12px 0 16px;
+}
+
+.logo img{
+height:82px;
+}
+
+.nav-links,
+.nav-actions,
+.hero-buttons{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:-1px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-head{
+display:block;
+}
+
+.section-head h2{
+margin-bottom:16px;
+}
+
+.overview-grid,
+.material-grid,
+.uses-grid,
+.process-grid,
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+section{
+padding:64px 0;
+}
+
+.footer-logo-box img{
+max-width:300px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+
+<div class="kicker">Clay Gravel • Rock • Dirt • Site Materials</div>
+
+<h1>Material Delivery & Spreading for Rural Property.</h1>
+
+<p>
+Wolf Creek Farms can deliver, spread, grade, and shape the materials needed for driveways, access roads, house pads, drainage areas, farm lanes, and property improvements.
+</p>
+
+<div class="hero-buttons">
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+<a href="#materials" class="btn btn-ghost">View Materials</a>
+</div>
+
+</div>
+</section>
+
+<section class="overview">
+<div class="container">
+
+<div class="section-head">
+<h2>Clay Gravel & Material Work</h2>
+<p>
+Material work is about more than dumping a load and leaving. The right material, proper placement, and clean grading make the difference.
+</p>
+</div>
+
+<div class="overview-grid">
+
+<div class="panel">
+<h3>Delivery, Spreading, and Grading</h3>
+<p>
+Wolf Creek Farms can help source, haul, spread, and grade material for driveways, roads, low spots, building areas, drainage projects, and rural access needs.
+</p>
+</div>
+
+<div class="panel">
+<h3>Built for Use, Not Looks Alone</h3>
+<p>
+A good driveway or access road needs the right base, proper slope, water control, and compaction. The goal is a surface that works and holds up over time.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="materials-section" id="materials">
+<div class="container">
+
+<div class="section-head">
+<h2>Materials We Can Help With</h2>
+<p>
+Material availability can vary by location and supplier, but these are the common materials customers may need for land, road, drainage, and site work.
+</p>
+</div>
+
+<div class="material-grid">
+
+<div class="material-card">
+<span>Road Base</span>
+<h3>Clay Gravel</h3>
+<p>Common for rural driveways, access roads, farm lanes, hunting roads, parking areas, and general road improvement.</p>
+</div>
+
+<div class="material-card">
+<span>Driveways</span>
+<h3>Crush & Run</h3>
+<p>A compactable base material used for driveways, road bases, parking pads, and areas that need a firm surface.</p>
+</div>
+
+<div class="material-card">
+<span>Drainage</span>
+<h3>Rip Rap</h3>
+<p>Larger rock used for washout control, ditch stabilization, culvert ends, creek banks, and erosion-prone areas.</p>
+</div>
+
+<div class="material-card">
+<span>Gravel</span>
+<h3>Washed Stone</h3>
+<p>Useful for drainage areas, clean stone beds, landscaping support, and places where water needs to move through the material.</p>
+</div>
+
+<div class="material-card">
+<span>Fill</span>
+<h3>Fill Dirt</h3>
+<p>Used to raise low areas, shape rough ground, build up sites, fill holes, and prepare areas for future grading.</p>
+</div>
+
+<div class="material-card">
+<span>Finish</span>
+<h3>Topsoil</h3>
+<p>Useful for finishing, seeding, yard repair, slope repair, and areas where grass or ground cover needs to grow.</p>
+</div>
+
+<div class="material-card">
+<span>Leveling</span>
+<h3>Sand</h3>
+<p>Helpful for leveling, bedding, drainage support, utility work, and specific site preparation needs.</p>
+</div>
+
+<div class="material-card">
+<span>Drainage</span>
+<h3>Drainage Rock</h3>
+<p>Used around culverts, low spots, ditch lines, water flow areas, and projects where water movement matters.</p>
+</div>
+
+<div class="material-card">
+<span>Custom</span>
+<h3>Other Materials</h3>
+<p>Need a specific material? Wolf Creek Farms can talk through the project and help determine what makes sense for the job.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="uses-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Common Uses</h2>
+<p>
+The same material can perform very differently depending on the land, water flow, traffic, and how the surface gets used.
+</p>
+</div>
+
+<div class="uses-grid">
+
+<div class="use-card">
+<h3>Driveway Repair</h3>
+<p>Fill potholes, improve rough surfaces, reshape washouts, and restore access.</p>
+</div>
+
+<div class="use-card">
+<h3>Access Roads</h3>
+<p>Build or improve roads for farms, hunting property, homesites, and rural land.</p>
+</div>
+
+<div class="use-card">
+<h3>Culvert Areas</h3>
+<p>Stabilize entrances, ditch crossings, and water flow areas around culverts.</p>
+</div>
+
+<div class="use-card">
+<h3>House Pads</h3>
+<p>Support site prep with fill, shaping, grading, and material placement.</p>
+</div>
+
+<div class="use-card">
+<h3>Drainage Work</h3>
+<p>Control water, reduce erosion, and support ditches, slopes, and washout-prone areas.</p>
+</div>
+
+<div class="use-card">
+<h3>RV Lots</h3>
+<p>Prepare firm access and parking areas for campers, RVs, shops, and outbuildings.</p>
+</div>
+
+<div class="use-card">
+<h3>Farm Lanes</h3>
+<p>Improve access for equipment, trucks, trailers, gates, barns, and fields.</p>
+</div>
+
+<div class="use-card">
+<h3>Parking Areas</h3>
+<p>Create or repair parking pads, turnarounds, shop areas, and equipment areas.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="process-section">
+<div class="container">
+
+<div class="section-head">
+<h2>How Material Jobs Work</h2>
+<p>
+A better result starts with understanding the property, the problem, and the material needed.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Look at the Site</h3>
+<p>We look at access, slope, water flow, soil, and how the area will be used.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Choose Material</h3>
+<p>We talk through the best material for the job and what makes sense for the budget.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Deliver & Spread</h3>
+<p>Material is delivered, spread, and placed where it needs to go.</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Grade & Shape</h3>
+<p>The area is graded and shaped for better use, access, and water movement.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="note-section">
+<div class="container">
+
+<div class="note-box">
+<h2>The Cheapest Material Is Not Always the Best Material.</h2>
+<p>
+A driveway, road, or pad that washes out costs more in the long run. Wolf Creek Farms can help you think through base, slope, drainage, and surface material so the work fits the property instead of creating another problem.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section">
+<div class="container">
+
+<div class="section-head">
+<h2>Questions</h2>
+<p>
+A few common questions about clay gravel, driveway repair, material spreading, and road improvements.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>Can you deliver and spread clay gravel?</h3>
+<p>Yes. Wolf Creek Farms can help with clay gravel delivery, spreading, grading, and access road improvement.</p>
+</div>
+
+<div class="faq-item">
+<h3>What material is best for my driveway?</h3>
+<p>It depends on your soil, slope, water flow, traffic, and current surface. Clay gravel, crush and run, and other stone materials may all fit different situations.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you fix washouts?</h3>
+<p>Yes. Washouts often need more than material. The area may need grading, drainage correction, rip rap, or better water flow.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can you work around culverts?</h3>
+<p>Yes. Wolf Creek Farms can help stabilize culvert areas, improve entrances, and add material where water flow has damaged the road or driveway.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you only spread material?</h3>
+<p>No. Material work can include delivery, spreading, grading, shaping, repair, cleanup, and related site work.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide free estimates?</h3>
+<p>Yes. Call 334-207-3331 or request an estimate online.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+
+<h2>Need Material Delivered or Spread?</h2>
+
+<p>
+From clay gravel and road base to rip rap, fill dirt, and driveway repair, Wolf Creek Farms can help get your property ready for use.
+</p>
+
+<a href="estimate.html" class="btn btn-secondary">Request a Free Estimate</a>
+<a href="tel:3342073331" class="btn btn-primary">Call Russ</a>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
+
+</body>
+</html>
