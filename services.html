@@ -208,62 +208,51 @@ gap:22px;
 }
 
 .service-card{
-    position:relative;
-    display:block;
-    overflow:hidden;
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:28px;
-    box-shadow:var(--shadow);
-    transition:.35s ease;
+position:relative;
+display:block;
+overflow:hidden;
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:28px;
+box-shadow:var(--shadow);
+transition:.35s ease;
 }
 
 .service-card::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.18),
-        rgba(0,0,0,0)
-    );
-    opacity:0;
-    transition:.35s ease;
-    z-index:1;
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top,rgba(0,0,0,.18),rgba(0,0,0,0));
+opacity:0;
+transition:.35s ease;
+z-index:1;
+pointer-events:none;
 }
 
 .service-card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(145,170,109,.45);
-    box-shadow:0 32px 70px rgba(0,0,0,.45);
+transform:translateY(-8px);
+border-color:rgba(145,170,109,.45);
+box-shadow:0 32px 70px rgba(0,0,0,.45);
 }
 
 .service-card:hover::before{
-    opacity:1;
-}
-
-.service-card:hover img{
-    transform:scale(1.04);
-}
-
-.service-content{
-    position:relative;
-    z-index:2;
-    padding:26px;
+opacity:1;
 }
 
 .service-card img{
-    width:100%;
-    height:270px;
-    object-fit:cover;
-    transition:.45s ease;
+width:100%;
+height:270px;
+object-fit:cover;
+transition:.45s ease;
 }
 
-.service-card:hover .btn{
-background:var(--hunter3);
+.service-card:hover img{
+transform:scale(1.04);
 }
-    
+
 .service-content{
+position:relative;
+z-index:2;
 padding:26px;
 }
 
@@ -285,7 +274,19 @@ margin-bottom:12px;
 
 .service-content p{
 color:var(--soft);
-margin-bottom:22px;
+margin-bottom:0;
+}
+
+.learn-more{
+margin-top:18px;
+color:var(--accent);
+font-weight:900;
+letter-spacing:.5px;
+transition:.25s;
+}
+
+.service-card:hover .learn-more{
+transform:translateX(8px);
 }
 
 .equipment-section{
@@ -580,7 +581,7 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <span>Clearing</span>
 <h3>Land Clearing</h3>
 <p>Remove brush, small trees, undergrowth, overgrowth, and unwanted vegetation to prepare your property for its next use.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
@@ -590,7 +591,7 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <span>Site Prep</span>
 <h3>Land Preparation</h3>
 <p>Prepare land for homes, shops, barns, food plots, access roads, RV lots, and future construction.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
@@ -600,7 +601,7 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <span>Access</span>
 <h3>Road Building</h3>
 <p>Build farm roads, hunting roads, driveways, and access roads with proper grading and clay gravel support.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
@@ -610,7 +611,7 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <span>Water Flow</span>
 <h3>Drainage</h3>
 <p>Solve drainage problems, improve water flow, reduce erosion, and protect your property from washouts.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
@@ -620,27 +621,27 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <span>Building Prep</span>
 <h3>House Pads</h3>
 <p>Grade and prepare stable building pads for homes, cabins, shops, barns, mobile homes, and future builds.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
 <a href="pond-building.html" class="service-card">
-<img src="assets/projects/project-7.jpg" alt="Pond building project">
+<img src="assets/projects/project-6.jpg" alt="Pond construction and pond building by Wolf Creek Farms">
 <div class="service-content">
 <span>Water Projects</span>
 <h3>Pond Building</h3>
 <p>New ponds, pond expansion, pond repair, shoreline improvements, and land shaping around water features.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
 <a href="demolition.html" class="service-card">
-<img src="assets/projects/project-6.jpg" alt="Demolition by Wolf Creek Farms">
+<img src="assets/projects/project-7.jpg" alt="Demolition by Wolf Creek Farms">
 <div class="service-content">
 <span>Removal</span>
 <h3>Demolition</h3>
 <p>Remove old structures, clean up debris, haul material, and prepare the property for new construction or future use.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
@@ -650,7 +651,7 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <span>Rural Property</span>
 <h3>Hunting Land Development</h3>
 <p>Roads, food plots, shooting lanes, fire breaks, clearing, and property improvements for hunting land.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
@@ -659,8 +660,8 @@ Every project starts with a clear plan. These are the core services Wolf Creek F
 <div class="service-content">
 <span>Materials</span>
 <h3>Clay Gravel</h3>
-<p>Clay, gravel spreading, driveway repair, road improvements, access repair, and grading for rural property.</p>
-<a href="index.html#estimate" class="btn btn-primary">Learn More</a>
+<p>Clay gravel spreading, driveway repair, road improvements, access repair, and grading for rural property.</p>
+<div class="learn-more">Learn More →</div>
 </div>
 </a>
 
