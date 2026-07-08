@@ -581,6 +581,24 @@ color:var(--soft);
 color:white;
 }
 
+.menu-toggle{
+display:none;
+background:transparent;
+border:1px solid var(--line);
+border-radius:12px;
+padding:10px;
+cursor:pointer;
+}
+
+.menu-toggle span{
+display:block;
+width:26px;
+height:3px;
+background:white;
+border-radius:999px;
+margin:5px 0;
+}
+  
 @media(max-width:980px){
 
 header{
@@ -588,14 +606,43 @@ position:relative;
 }
 
 .nav{
-flex-direction:column;
-padding:12px 0 16px;
+display:grid;
+grid-template-columns:auto auto;
+align-items:center;
+padding:12px 0;
+}
+
+.logo img{
+height:78px;
+}
+
+.menu-toggle{
+display:block;
+justify-self:end;
 }
 
 .nav-links,
 .nav-actions{
-flex-wrap:wrap;
-justify-content:center;
+grid-column:1 / -1;
+display:none;
+width:100%;
+}
+
+.nav.open .nav-links,
+.nav.open .nav-actions{
+display:flex;
+}
+
+.nav-links{
+flex-direction:column;
+gap:16px;
+padding:18px 0 8px;
+}
+
+.nav-actions{
+flex-direction:column;
+gap:12px;
+padding-bottom:14px;
 }
 
 .phone{
@@ -682,6 +729,12 @@ max-width:300px;
 <img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
 </a>
 
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+<span></span>
+<span></span>
+<span></span>
+</button>
+  
 <nav class="nav-links">
 <a href="services.html">Services</a>
 <a href="projects.html">Projects</a>
@@ -1051,5 +1104,17 @@ Land Clearing • Land Prep • Road Building • Drainage • Pond Building •
 </div>
 </footer>
 
+  <script>
+const nav = document.querySelector(".nav");
+const menuToggle = document.querySelector(".menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("open");
+
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", !expanded);
+});
+</script>
+  
 </body>
 </html>
