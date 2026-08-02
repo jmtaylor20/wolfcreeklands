@@ -28,6 +28,8 @@
     const cleanToggle = toggle.cloneNode(true);
     toggle.replaceWith(cleanToggle);
     toggle = cleanToggle;
+    toggle.type = "button";
+    toggle.setAttribute("aria-controls", "primary-navigation");
 
     const links = nav.querySelector(".nav-links");
     if (links) links.id = "primary-navigation";
