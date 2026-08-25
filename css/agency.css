@@ -1,17 +1,17 @@
 /* Wolf Creek Farms — agency redesign layer */
 :root {
-  --hunter: #18382b;
+  --hunter: #1e4433;
   --hunter2: #2f6244;
   --hunter3: #53825c;
-  --charcoal: #0d1210;
-  --charcoal2: #141b17;
-  --panel: #1a241e;
+  --charcoal: #151d19;
+  --charcoal2: #1d2621;
+  --panel: #243029;
   --white: #f8f6ef;
   --soft: #d9ddd4;
-  --muted: #9da99f;
+  --muted: #aab5ab;
   --accent: #adc889;
   --sand: #d8c7a5;
-  --line: rgba(248, 246, 239, .13);
+  --line: rgba(248, 246, 239, .17);
   --shadow: 0 28px 80px rgba(0, 0, 0, .28);
   --radius: 12px;
 }
@@ -57,7 +57,7 @@ body::before {
 header {
   position: fixed;
   top: 0;
-  background: rgba(13, 18, 16, .82);
+  background: rgba(21, 29, 25, .84);
   border-bottom: 1px solid rgba(255, 255, 255, .11);
   backdrop-filter: blur(20px) saturate(125%);
   -webkit-backdrop-filter: blur(20px) saturate(125%);
@@ -181,8 +181,8 @@ header {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(7, 11, 9, .92) 0%, rgba(7, 11, 9, .64) 48%, rgba(7, 11, 9, .16) 100%),
-    linear-gradient(0deg, #0d1210 0%, transparent 35%);
+    linear-gradient(90deg, rgba(12, 18, 15, .86) 0%, rgba(12, 18, 15, .48) 48%, rgba(12, 18, 15, .04) 100%),
+    linear-gradient(0deg, var(--charcoal) 0%, transparent 38%);
 }
 
 .hero::after {
@@ -489,7 +489,7 @@ section {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(145deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .018));
+  background: linear-gradient(145deg, rgba(255, 255, 255, .075), rgba(255, 255, 255, .03));
   box-shadow: none;
   transition: transform .3s ease, border-color .3s ease, background .3s ease;
 }
@@ -687,8 +687,8 @@ section {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(7, 11, 9, .94), rgba(7, 11, 9, .5)),
-    linear-gradient(0deg, rgba(7, 11, 9, .72), transparent);
+    linear-gradient(90deg, rgba(12, 18, 15, .88), rgba(12, 18, 15, .38)),
+    linear-gradient(0deg, rgba(12, 18, 15, .62), transparent);
 }
 
 .final-cta h2 {
@@ -712,8 +712,8 @@ footer {
   padding: 82px 0 54px;
   border-top: 1px solid var(--line);
   background:
-    radial-gradient(circle at 50% 0, rgba(83, 130, 92, .17), transparent 38rem),
-    #090d0b;
+    radial-gradient(circle at 50% 0, rgba(83, 130, 92, .2), transparent 38rem),
+    #101714;
   text-align: center;
 }
 
@@ -1071,3 +1071,65 @@ footer p {
     display: none;
   }
 }
+
+
+/* ------------------------------------------------------------------
+   Topographic contour texture — carried over from the social themes.
+   The SVG tiles seamlessly; each surface sets its own scale/strength.
+   ------------------------------------------------------------------ */
+
+/* footer carries the contour texture on its own layer so the type stays clean */
+footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url("../assets/patterns/topo.svg") center / 620px 620px repeat;
+  opacity: .13;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, transparent 22%, #000 88%);
+  mask-image: radial-gradient(ellipse at 50% 50%, transparent 22%, #000 88%);
+}
+
+footer .container {
+  z-index: 1;
+}
+
+/* Sections that carry the texture on their own panel */
+.equipment-section,
+.use-cases,
+.faq-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.equipment-section::after,
+.use-cases::after,
+.faq-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("../assets/patterns/topo.svg") center / 640px 640px repeat;
+  opacity: .14;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 15%, transparent 78%);
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 15%, transparent 78%);
+}
+
+.equipment-section::after {
+  opacity: .2;
+}
+
+.faq-section::after {
+  opacity: .1;
+}
+
+@media (max-width: 760px) {
+  .equipment-section::after,
+  .use-cases::after,
+  .faq-section::after {
+    background-size: 420px 420px;
+  }
+}
+
