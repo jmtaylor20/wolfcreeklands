@@ -639,6 +639,66 @@ border-radius:999px;
 margin:5px 0;
 }
   
+
+.equipment-section{
+background:linear-gradient(135deg,var(--hunter),var(--charcoal));
+}
+
+.equipment-wrap{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:42px;
+align-items:center;
+}
+
+.equipment-img img{
+height:520px;
+width:100%;
+object-fit:cover;
+border-radius:32px;
+box-shadow:var(--shadow);
+}
+
+.equipment-copy h2{
+font-size:clamp(38px,4.4vw,62px);
+line-height:.95;
+letter-spacing:-1.5px;
+text-transform:uppercase;
+margin-bottom:22px;
+}
+
+.equipment-copy p{
+font-size:20px;
+color:var(--soft);
+margin-bottom:26px;
+}
+
+.faq-section{
+background:#0e1211;
+}
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq-item{
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:22px;
+padding:24px;
+}
+
+.faq-item h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.faq-item p{
+color:var(--soft);
+}
+
 @media(max-width:980px){
 
 header{
@@ -730,8 +790,14 @@ margin-bottom:16px;
 
 .case-grid,
 .process-grid,
-.project-grid{
+.project-grid,
+.equipment-wrap,
+.faq-grid{
 grid-template-columns:1fr;
+}
+
+.equipment-img img{
+height:310px;
 }
 
 .project-grid img,
@@ -757,6 +823,71 @@ height:82px;
 max-width:300px;
 }
 }
+
+/* Mobile quick-contact bar */
+.call-bar{
+display:none;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+z-index:1200;
+background:linear-gradient(90deg,rgba(32,59,45,.98),rgba(16,20,19,.98));
+backdrop-filter:blur(12px);
+border-top:1px solid var(--line);
+box-shadow:0 -8px 30px rgba(0,0,0,.45);
+grid-template-columns:1fr 1fr 1fr;
+gap:8px;
+padding:9px 10px;
+padding-bottom:calc(9px + env(safe-area-inset-bottom,0px));
+}
+
+.call-bar a{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:3px;
+padding:9px 4px;
+border-radius:14px;
+font-weight:900;
+font-size:12.5px;
+letter-spacing:.2px;
+line-height:1.1;
+border:1px solid var(--line);
+background:rgba(255,255,255,.08);
+color:#fff;
+}
+
+.call-bar a.cb-call{
+background:var(--hunter2);
+border-color:transparent;
+}
+
+.call-bar a.cb-estimate{
+background:#fff;
+color:var(--charcoal);
+border-color:transparent;
+}
+
+.call-bar svg{
+width:18px;
+height:18px;
+fill:none;
+stroke:currentColor;
+stroke-width:2;
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
+@media(max-width:760px){
+.call-bar{display:grid;}
+body{padding-bottom:78px;}
+}
+body.menu-open .call-bar{
+display:none;
+}
+
 </style>
 <link rel="stylesheet" href="css/agency.css">
 <script src="js/agency.js" defer></script>
@@ -948,6 +1079,59 @@ max-width:300px;
    "publisher": {
     "@id": "https://wolfcreeklands.com/#business"
    }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How much does land clearing cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Cost depends on acreage, brush density, tree size, access, and how clean you want the finished property. Every job is different, so the best next step is a free estimate."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you charge for an estimate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Estimates are free. Call or text 334-207-3331, or send your project details through the form and we will follow up."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How far do you travel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wolf Creek Farms is based in Notasulga and works across Macon, Lee, Tallapoosa, Elmore, and Montgomery counties, including Auburn, Opelika, Tallassee, Lake Martin, Wetumpka, and Pike Road."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you take on small jobs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. A single driveway repair, one house pad, or a few acres of clearing are all normal jobs for us alongside larger land development work."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you fix standing water and washouts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Drainage work, ditch shaping, culvert repair, and rip rap can move water off the property before it causes erosion or damage."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How soon can you start?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Scheduling depends on weather, ground conditions, and current jobs. Reach out early, especially for wet-season work, and we will give you a realistic window."
+     }
+    }
+   ]
   }
  ]
 }
@@ -1133,7 +1317,7 @@ From farm roads and hunting roads to driveways and clay gravel work, we help mak
 
 <div class="feature">
 <div class="feature-img">
-<img src="assets/projects/project-9.jpg" alt="Wolf Creek Farms land development aerial style project view">
+<img src="assets/projects/project-9.jpg" alt="Wolf Creek Farms land development aerial style project view" loading="lazy">
 </div>
 
 <div class="feature-copy">
@@ -1203,11 +1387,12 @@ Project photos do the selling. This section gives customers a quick look at real
 </div>
 
 <div class="project-grid">
-<img src="assets/projects/project-2.jpg" alt="Wolf Creek Farms land clearing project">
-<img src="assets/projects/project-3.jpg" alt="Wolf Creek Farms completed land project">
-<img src="assets/projects/project-4.jpg" alt="Wolf Creek Farms equipment project">
-<img src="assets/projects/project-5.jpg" alt="Wolf Creek Farms road and land project">
-<img src="assets/projects/project-6.jpg" alt="Wolf Creek Farms rural property project">
+<img src="assets/projects/project-2.jpg" alt="Wolf Creek Farms land clearing project" loading="lazy">
+<img src="assets/projects/project-3.jpg" alt="Wolf Creek Farms completed land project" loading="lazy">
+<img src="assets/projects/project-4.jpg" alt="Wolf Creek Farms equipment project" loading="lazy">
+<img src="assets/projects/project-5.jpg" alt="Wolf Creek Farms road and land project" loading="lazy">
+<img src="assets/projects/project-6.jpg" alt="Wolf Creek Farms rural property project" loading="lazy">
+<img src="assets/projects/project-12.jpg" alt="Wolf Creek Farms site development and grading project" loading="lazy">
 </div>
 
 <div style="margin-top:30px;">
@@ -1295,6 +1480,78 @@ Serving homeowners, farms, hunting properties, rural landowners, and commercial 
 </div>
 </section>
 
+
+<section class="equipment-section">
+<div class="container equipment-wrap">
+
+<div class="equipment-img">
+<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Wolf Creek Farms excavator on a land development job in East Central Alabama" loading="lazy">
+</div>
+
+<div class="equipment-copy">
+<div class="kicker">Equipment We Run</div>
+<h2>The Right Machine For The Job.</h2>
+<p>
+Dozers, excavators, and dump trucks let us handle clearing, grading, hauling, and water work without renting the job out or leaving the property torn up.
+</p>
+
+<div class="checks">
+<div>&#10003; Dozer work and clearing</div>
+<div>&#10003; Excavation and pond work</div>
+<div>&#10003; Grading and site shaping</div>
+<div>&#10003; Clay gravel and material hauling</div>
+</div>
+
+<div style="margin-top:30px;">
+<a href="services.html" class="btn btn-ghost">See All Services</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="faq-section" id="faq">
+<div class="container">
+
+<div class="section-head">
+<h2>Common Questions</h2>
+<p>
+The things landowners ask most before starting a clearing, road, drainage, or site development project.
+</p>
+</div>
+
+<div class="faq-grid">
+
+<div class="faq-item">
+<h3>How much does land clearing cost?</h3>
+<p>Cost depends on acreage, brush density, tree size, access, and how clean you want the finished property. Every job is different, so the best next step is a free estimate.</p>
+</div>
+<div class="faq-item">
+<h3>Do you charge for an estimate?</h3>
+<p>No. Estimates are free. Call or text 334-207-3331, or send your project details through the form and we will follow up.</p>
+</div>
+<div class="faq-item">
+<h3>How far do you travel?</h3>
+<p>Wolf Creek Farms is based in Notasulga and works across Macon, Lee, Tallapoosa, Elmore, and Montgomery counties, including Auburn, Opelika, Tallassee, Lake Martin, Wetumpka, and Pike Road.</p>
+</div>
+<div class="faq-item">
+<h3>Do you take on small jobs?</h3>
+<p>Yes. A single driveway repair, one house pad, or a few acres of clearing are all normal jobs for us alongside larger land development work.</p>
+</div>
+<div class="faq-item">
+<h3>Can you fix standing water and washouts?</h3>
+<p>Yes. Drainage work, ditch shaping, culvert repair, and rip rap can move water off the property before it causes erosion or damage.</p>
+</div>
+<div class="faq-item">
+<h3>How soon can you start?</h3>
+<p>Scheduling depends on weather, ground conditions, and current jobs. Reach out early, especially for wet-season work, and we will give you a realistic window.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
 <section class="final-cta">
 <div class="container">
 <h2>Ready to Improve Your Property?</h2>
@@ -1350,5 +1607,22 @@ menuToggle.addEventListener("click", () => {
 });
 </script>
   
+
+<!-- Mobile quick-contact bar -->
+<div class="call-bar">
+<a class="cb-call" href="tel:3342073331" aria-label="Call Wolf Creek Farms">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+Call
+</a>
+<a class="cb-text" href="sms:3342073331" aria-label="Text Wolf Creek Farms">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.9L3 20.5l1.5-4.4A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4Z"/></svg>
+Text
+</a>
+<a class="cb-estimate" href="estimate.html" aria-label="Request a free estimate">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1Z"/><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+Free Estimate
+</a>
+</div>
+
 </body>
 </html>
