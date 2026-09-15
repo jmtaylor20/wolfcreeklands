@@ -1,4 +1,4 @@
-/* Wolf Creek Farms — agency redesign layer */
+/* Wolf Creek Farms: agency redesign layer */
 :root {
   --hunter: #1e4433;
   --hunter2: #2f6244;
@@ -1074,7 +1074,7 @@ footer p {
 
 
 /* ------------------------------------------------------------------
-   Topographic contour texture — carried over from the social themes.
+   Topographic contour texture, carried over from the social themes.
    The SVG tiles seamlessly; each surface sets its own scale/strength.
    ------------------------------------------------------------------ */
 
