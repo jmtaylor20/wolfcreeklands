@@ -181,7 +181,7 @@ position:relative;
 background:
 linear-gradient(90deg,rgba(16,20,19,.92),rgba(16,20,19,.58),rgba(16,20,19,.16)),
 linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 34%),
-url("assets/equipment/wolf-creek-hero-excavator.jpg");
+url("assets/equipment/wolf-creek-hero-excavator-bg.jpg");
 background-size:cover;
 background-position:58% center;
 padding:155px 0 72px;
@@ -445,7 +445,7 @@ border-radius:22px;
 box-shadow:var(--shadow);
 }
 
-.project-grid img:first-child{
+.project-grid > picture:first-child img{
 grid-row:span 2;
 height:518px;
 }
@@ -539,7 +539,7 @@ box-shadow:var(--shadow);
 .final-cta{
 background:
 linear-gradient(rgba(21,29,25,.62),rgba(21,29,25,.76)),
-url("assets/equipment/wolf-creek-dozer-2.jpg");
+url("assets/equipment/wolf-creek-dozer-2-bg.jpg");
 background-size:cover;
 background-position:center;
 text-align:center;
@@ -779,7 +779,7 @@ height:310px;
 }
 
 .project-grid img,
-.project-grid img:first-child{
+.project-grid > picture:first-child img{
 height:280px;
 grid-row:auto;
 }
@@ -872,7 +872,7 @@ padding:120px 0 90px;
 text-align:center;
 background:
 linear-gradient(rgba(21,29,25,.66),rgba(21,29,25,.8)),
-url("assets/equipment/wolf-creek-dozer-2.jpg");
+url("assets/equipment/wolf-creek-dozer-2-bg.jpg");
 background-size:cover;
 background-position:center;
 }
@@ -960,7 +960,10 @@ font-size:15px;
 <div class="container nav">
 
 <a href="index.html" class="logo">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-200.webp 200w, assets/logo/wolf-creek-logo-white-400.webp 400w" sizes="120px">
+<img src="assets/logo/wolf-creek-logo-white-400.png" srcset="assets/logo/wolf-creek-logo-white-200.png 200w, assets/logo/wolf-creek-logo-white-400.png 400w" sizes="120px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </a>
 
 <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -1059,7 +1062,10 @@ The most common places landowners head from here.
 <div class="container">
 
 <div class="footer-logo-box">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-400.webp 400w, assets/logo/wolf-creek-logo-white-720.webp 720w" sizes="360px">
+<img src="assets/logo/wolf-creek-logo-white-720.png" srcset="assets/logo/wolf-creek-logo-white-400.png 400w, assets/logo/wolf-creek-logo-white-720.png 720w" sizes="360px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </div>
 
 <h3>Wolf Creek Farms</h3>

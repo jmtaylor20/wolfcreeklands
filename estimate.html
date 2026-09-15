@@ -175,7 +175,7 @@ align-items:end;
 background:
 linear-gradient(90deg,rgba(16,20,19,.96),rgba(16,20,19,.78),rgba(16,20,19,.42)),
 linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
-url("assets/equipment/wolf-creek-hero-excavator.jpg");
+url("assets/equipment/wolf-creek-hero-excavator-bg.jpg");
 background-size:cover;
 background-position:center;
 padding:160px 0 82px;
@@ -748,7 +748,10 @@ display:none;
 <div class="container nav">
 
 <a href="index.html" class="logo">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-200.webp 200w, assets/logo/wolf-creek-logo-white-400.webp 400w" sizes="120px">
+<img src="assets/logo/wolf-creek-logo-white-400.png" srcset="assets/logo/wolf-creek-logo-white-200.png 200w, assets/logo/wolf-creek-logo-white-400.png 400w" sizes="120px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </a>
 
 <nav class="nav-links">
@@ -816,14 +819,14 @@ netlify-honeypot="bot-field">
 <input type="email" name="email" placeholder="Email">
 
 <div class="form-row">
-<select name="preferred-contact">
+<select name="preferred-contact" aria-label="Preferred contact method">
 <option value="">Preferred Contact</option>
 <option>Call</option>
 <option>Text</option>
 <option>Email</option>
 </select>
 
-<select name="service-needed" required>
+<select name="service-needed" required aria-label="Service needed">
 <option value="">Service Needed</option>
 <option>Land Clearing</option>
 <option>Land Prep / Land Preparation</option>
@@ -1060,7 +1063,10 @@ A few common questions before requesting a free estimate.
 <div class="container">
 
 <div class="footer-logo-box">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-400.webp 400w, assets/logo/wolf-creek-logo-white-720.webp 720w" sizes="360px">
+<img src="assets/logo/wolf-creek-logo-white-720.png" srcset="assets/logo/wolf-creek-logo-white-400.png 400w, assets/logo/wolf-creek-logo-white-720.png 720w" sizes="360px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </div>
 
 <h3>Wolf Creek Farms</h3>
