@@ -72,10 +72,21 @@ background-position:center;
 color:var(--white);
 min-height:100vh;
 display:flex;
+flex-direction:column;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+main{
+flex:1;
+display:flex;
 align-items:center;
 justify-content:center;
-line-height:1.6;
-padding:30px;
+padding:150px 30px 70px;
 }
 
 .card{
@@ -88,7 +99,7 @@ text-align:center;
 box-shadow:0 22px 60px rgba(0,0,0,.34);
 }
 
-.logo{
+.card-logo{
 max-width:320px;
 margin:0 auto 26px;
 filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
@@ -111,7 +122,7 @@ letter-spacing:-2px;
 margin-bottom:18px;
 }
 
-p{
+.card p{
 font-size:20px;
 color:var(--soft);
 max-width:620px;
@@ -151,13 +162,13 @@ background:white;
 color:var(--charcoal);
 }
 
-.phone{
+.card-phone{
 margin-top:24px;
 font-weight:900;
 color:white;
 }
 
-.phone small{
+.card-phone small{
 display:block;
 font-size:13px;
 color:var(--soft);
@@ -169,8 +180,184 @@ font-weight:700;
 padding:30px 22px;
 }
 
-.logo{
+.card-logo{
 max-width:260px;
+}
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:linear-gradient(90deg,rgba(32,59,45,.96),rgba(16,20,19,.94));
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--line);
+}
+
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:22px;
+padding:6px 0;
+}
+
+.logo img{
+height:96px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.menu-toggle{
+display:none;
+background:transparent;
+border:1px solid var(--line);
+border-radius:12px;
+padding:10px;
+cursor:pointer;
+}
+
+.menu-toggle span{
+display:block;
+width:26px;
+height:3px;
+background:white;
+border-radius:999px;
+margin:5px 0;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:800;
+letter-spacing:.4px;
+color:#edf3ea;
+}
+
+.nav-links a:hover{
+color:var(--accent);
+}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.phone{
+font-weight:900;
+line-height:1.15;
+text-align:right;
+}
+
+.phone small{
+display:block;
+font-size:12px;
+font-weight:700;
+color:var(--soft);
+}
+
+footer{
+background:linear-gradient(135deg,#203b2d,#101413);
+padding:70px 0;
+text-align:center;
+border-top:1px solid var(--line);
+}
+
+.footer-logo-box{
+display:inline-flex;
+margin-bottom:26px;
+}
+
+.footer-logo-box img{
+max-width:360px;
+filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+margin:24px 0;
+}
+
+.footer-links a{
+font-weight:900;
+color:var(--soft);
+}
+
+.footer-links a:hover{
+color:white;
+}
+
+@media(max-width:980px){
+header{
+position:relative;
+}
+
+.nav{
+display:grid;
+grid-template-columns:auto auto;
+align-items:center;
+padding:12px 0;
+}
+
+.logo img{
+height:78px;
+}
+
+.menu-toggle{
+display:block;
+justify-self:end;
+}
+
+.nav-links,
+.nav-actions{
+grid-column:1 / -1;
+display:none;
+width:100%;
+}
+
+.nav.open .nav-links,
+.nav.open .nav-actions{
+display:flex;
+}
+
+.nav-links{
+flex-direction:column;
+gap:16px;
+padding:18px 0 8px;
+}
+
+.nav-actions{
+flex-direction:column;
+gap:12px;
+padding-bottom:14px;
+}
+
+.phone{
+text-align:center;
+width:100%;
+}
+
+main{
+padding:40px 22px 60px;
+}
+
+.footer-logo-box img{
+max-width:300px;
 }
 }
 
@@ -266,9 +453,44 @@ display:none;
 
 <body>
 
+<header>
+<div class="container nav">
+
+<a href="index.html" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</a>
+
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<nav class="nav-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+<div class="phone">
+334-207-3331
+<small>Call or Text for Estimates</small>
+</div>
+<a href="estimate.html" class="btn btn-primary">Free Estimate</a>
+</div>
+
+</div>
+</header>
+
+<main>
+
 <div class="card">
 
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms" class="logo">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms" class="card-logo">
 
 <div class="kicker">Estimate Request Received</div>
 
@@ -284,12 +506,46 @@ Your request has been submitted. Russ will follow up as soon as possible to talk
 <a href="tel:3342073331" class="btn btn-primary">Call Now</a>
 </div>
 
-<div class="phone">
+<div class="card-phone">
 334-207-3331
 <small>Call or Text for Estimates</small>
 </div>
 
 </div>
+
+</main>
+
+<footer>
+<div class="container">
+
+<div class="footer-logo-box">
+<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+</div>
+
+<h3>Wolf Creek Farms</h3>
+
+<p>
+Land Clearing • Land Prep • Road Building • Drainage • Pond Building • Demolition • Land Management
+</p>
+
+<p style="margin-top:8px;">
+334-207-3331 • russ@wolfcreeklands.com
+</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="process.html">Process</a>
+<a href="service-area.html">Service Area</a>
+<a href="estimate.html">Contact</a>
+</div>
+
+<p>Free Estimates • Locally Owned • Residential • Commercial</p>
+<p style="margin-top:8px;">wolfcreeklands.com</p>
+
+</div>
+</footer>
 
 
 <!-- Mobile quick-contact bar -->
