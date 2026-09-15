@@ -163,7 +163,7 @@ align-items:end;
 background:
 linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.70),rgba(16,20,19,.28)),
 linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
-url("assets/equipment/wolf-creek-hero-excavator.jpg");
+url("assets/equipment/wolf-creek-hero-excavator-bg.jpg");
 background-size:cover;
 background-position:center;
 padding:160px 0 82px;
@@ -393,7 +393,7 @@ border-radius:24px;
 box-shadow:var(--shadow);
 }
 
-.photo-grid img:first-child{
+.photo-grid > picture:first-child img{
 grid-row:span 2;
 height:538px;
 }
@@ -453,7 +453,7 @@ color:var(--soft);
 .final-cta{
 background:
 linear-gradient(rgba(21,29,25,.62),rgba(21,29,25,.78)),
-url("assets/projects/project-13.jpg");
+url("assets/projects/project-13-bg.jpg");
 background-size:cover;
 background-position:center;
 text-align:center;
@@ -572,7 +572,7 @@ grid-template-columns:1fr;
 }
 
 .photo-grid img,
-.photo-grid img:first-child{
+.photo-grid > picture:first-child img{
 height:310px;
 grid-row:auto;
 }
@@ -752,7 +752,10 @@ display:none;
 <div class="container nav">
 
 <a href="index.html" class="logo">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-200.webp 200w, assets/logo/wolf-creek-logo-white-400.webp 400w" sizes="120px">
+<img src="assets/logo/wolf-creek-logo-white-400.png" srcset="assets/logo/wolf-creek-logo-white-200.png 200w, assets/logo/wolf-creek-logo-white-400.png 400w" sizes="120px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </a>
 
 <nav class="nav-links">
@@ -1023,11 +1026,26 @@ The right process helps turn rough property into land that is easier to access, 
 </div>
 
 <div class="photo-grid">
-<img src="assets/projects/project-13.jpg" alt="Wolf Creek Farms site preparation process">
-<img src="assets/projects/project-10.jpg" alt="Wolf Creek Farms material and access work">
-<img src="assets/projects/project-9.jpg" alt="Wolf Creek Farms drainage work">
-<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Wolf Creek Farms equipment">
-<img src="assets/projects/project-5.jpg" alt="Wolf Creek Farms land clearing work">
+<picture>
+<source type="image/webp" srcset="assets/projects/project-13-480.webp 480w, assets/projects/project-13-900.webp 900w, assets/projects/project-13-1600.webp 1600w" sizes="(max-width:760px) 92vw, 42vw">
+<img src="assets/projects/project-13-900.jpg" srcset="assets/projects/project-13-480.jpg 480w, assets/projects/project-13-900.jpg 900w, assets/projects/project-13-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 42vw" width="2000" height="1456" alt="Wolf Creek Farms site preparation process" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-10-480.webp 480w, assets/projects/project-10-900.webp 900w, assets/projects/project-10-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-10-900.jpg" srcset="assets/projects/project-10-480.jpg 480w, assets/projects/project-10-900.jpg 900w, assets/projects/project-10-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1422" alt="Wolf Creek Farms material and access work" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-9-480.webp 480w, assets/projects/project-9-900.webp 900w, assets/projects/project-9-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-9-900.jpg" srcset="assets/projects/project-9-480.jpg 480w, assets/projects/project-9-900.jpg 900w, assets/projects/project-9-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1437" alt="Wolf Creek Farms drainage work" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/equipment/wolf-creek-hero-excavator-480.webp 480w, assets/equipment/wolf-creek-hero-excavator-900.webp 900w, assets/equipment/wolf-creek-hero-excavator-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/equipment/wolf-creek-hero-excavator-900.jpg" srcset="assets/equipment/wolf-creek-hero-excavator-480.jpg 480w, assets/equipment/wolf-creek-hero-excavator-900.jpg 900w, assets/equipment/wolf-creek-hero-excavator-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1333" alt="Wolf Creek Farms equipment" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-5-480.webp 480w, assets/projects/project-5-900.webp 900w, assets/projects/project-5-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-5-900.jpg" srcset="assets/projects/project-5-480.jpg 480w, assets/projects/project-5-900.jpg 900w, assets/projects/project-5-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1021" alt="Wolf Creek Farms land clearing work" loading="lazy" decoding="async">
+</picture>
 </div>
 
 </div>
@@ -1112,7 +1130,10 @@ Send your project details, location, and photos if you have them. Wolf Creek Far
 <div class="container">
 
 <div class="footer-logo-box">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-400.webp 400w, assets/logo/wolf-creek-logo-white-720.webp 720w" sizes="360px">
+<img src="assets/logo/wolf-creek-logo-white-720.png" srcset="assets/logo/wolf-creek-logo-white-400.png 400w, assets/logo/wolf-creek-logo-white-720.png 720w" sizes="360px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </div>
 
 <h3>Wolf Creek Farms</h3>

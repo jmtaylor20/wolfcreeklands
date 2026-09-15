@@ -163,7 +163,7 @@ align-items:end;
 background:
 linear-gradient(90deg,rgba(16,20,19,.95),rgba(16,20,19,.70),rgba(16,20,19,.28)),
 linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 35%),
-url("assets/projects/project-11.jpg");
+url("assets/projects/project-11-bg.jpg");
 background-size:cover;
 background-position:center;
 padding:160px 0 82px;
@@ -357,7 +357,7 @@ border-radius:24px;
 box-shadow:var(--shadow);
 }
 
-.gallery-grid img:first-child{
+.gallery-grid > picture:first-child img{
 grid-row:span 2;
 height:538px;
 }
@@ -479,7 +479,7 @@ color:var(--soft);
 .final-cta{
 background:
 linear-gradient(rgba(21,29,25,.62),rgba(21,29,25,.78)),
-url("assets/projects/project-10.jpg");
+url("assets/projects/project-10-bg.jpg");
 background-size:cover;
 background-position:center;
 text-align:center;
@@ -597,7 +597,7 @@ grid-template-columns:1fr;
 
 .image-feature img,
 .gallery-grid img,
-.gallery-grid img:first-child{
+.gallery-grid > picture:first-child img{
 height:310px;
 grid-row:auto;
 }
@@ -797,7 +797,10 @@ display:none;
 <div class="container nav">
 
 <a href="index.html" class="logo">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-200.webp 200w, assets/logo/wolf-creek-logo-white-400.webp 400w" sizes="120px">
+<img src="assets/logo/wolf-creek-logo-white-400.png" srcset="assets/logo/wolf-creek-logo-white-200.png 200w, assets/logo/wolf-creek-logo-white-400.png 400w" sizes="120px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </a>
 
 <nav class="nav-links">
@@ -875,7 +878,10 @@ Many road problems come from water. Good grading, ditching, culvert support, and
 <div class="container image-feature-grid">
 
 <div>
-<img src="assets/projects/project-10.jpg" alt="Road building and clay gravel work by Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/projects/project-10-480.webp 480w, assets/projects/project-10-900.webp 900w, assets/projects/project-10-1600.webp 1600w" sizes="(max-width:760px) 92vw, 30vw">
+<img src="assets/projects/project-10-900.jpg" srcset="assets/projects/project-10-480.jpg 480w, assets/projects/project-10-900.jpg 900w, assets/projects/project-10-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 30vw" width="2000" height="1422" alt="Road building and clay gravel work by Wolf Creek Farms" loading="lazy" decoding="async">
+</picture>
 </div>
 
 <div class="image-feature-copy">
@@ -978,11 +984,26 @@ These photos show the type of material, grading, access, and drainage work that 
 </div>
 
 <div class="gallery-grid">
-<img src="assets/projects/project-11.jpg" alt="Road building project by Wolf Creek Farms">
-<img src="assets/projects/project-10.jpg" alt="Clay gravel and access road work">
-<img src="assets/projects/project-8.jpg" alt="Drainage support for road work">
-<img src="assets/projects/project-11.jpg" alt="Improved rural access road">
-<img src="assets/projects/project-10.jpg" alt="Road building materials and grading">
+<picture>
+<source type="image/webp" srcset="assets/projects/project-11-480.webp 480w, assets/projects/project-11-900.webp 900w" sizes="(max-width:760px) 92vw, 42vw">
+<img src="assets/projects/project-11-900.jpg" srcset="assets/projects/project-11-480.jpg 480w, assets/projects/project-11-900.jpg 900w" sizes="(max-width:760px) 92vw, 42vw" width="1128" height="2000" alt="Road building project by Wolf Creek Farms" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-10-480.webp 480w, assets/projects/project-10-900.webp 900w, assets/projects/project-10-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-10-900.jpg" srcset="assets/projects/project-10-480.jpg 480w, assets/projects/project-10-900.jpg 900w, assets/projects/project-10-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1422" alt="Clay gravel and access road work" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-8-480.webp 480w, assets/projects/project-8-900.webp 900w, assets/projects/project-8-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-8-900.jpg" srcset="assets/projects/project-8-480.jpg 480w, assets/projects/project-8-900.jpg 900w, assets/projects/project-8-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1432" alt="Drainage support for road work" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-11-480.webp 480w, assets/projects/project-11-900.webp 900w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-11-900.jpg" srcset="assets/projects/project-11-480.jpg 480w, assets/projects/project-11-900.jpg 900w" sizes="(max-width:760px) 92vw, 28vw" width="1128" height="2000" alt="Improved rural access road" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-10-480.webp 480w, assets/projects/project-10-900.webp 900w, assets/projects/project-10-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-10-900.jpg" srcset="assets/projects/project-10-480.jpg 480w, assets/projects/project-10-900.jpg 900w, assets/projects/project-10-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1422" alt="Road building materials and grading" loading="lazy" decoding="async">
+</picture>
 </div>
 
 </div>
@@ -1165,7 +1186,10 @@ From driveways and farm roads to hunting roads, clay gravel, culvert support, dr
 <div class="container">
 
 <div class="footer-logo-box">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-400.webp 400w, assets/logo/wolf-creek-logo-white-720.webp 720w" sizes="360px">
+<img src="assets/logo/wolf-creek-logo-white-720.png" srcset="assets/logo/wolf-creek-logo-white-400.png 400w, assets/logo/wolf-creek-logo-white-720.png 720w" sizes="360px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </div>
 
 <h3>Wolf Creek Farms</h3>

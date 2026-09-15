@@ -1060,7 +1060,7 @@ footer p {
   }
 
   .project-grid img,
-  .project-grid img:first-child,
+  .project-grid > picture:first-child img,
   .gallery-grid img,
   .photo-grid img {
     height: 300px;
@@ -1133,3 +1133,22 @@ footer .container {
   }
 }
 
+
+
+/* Responsive images. <picture> wraps each <img>, so drop the wrapper from the
+   box tree and let the <img> stay the grid/flex item it has always been.
+   <source> does not compute to display:none here, so hide it explicitly or it
+   becomes an extra grid item and scrambles placement. */
+picture {
+  display: contents;
+}
+
+picture > source {
+  display: none;
+}
+
+/* width/height attributes now set an intrinsic ratio, so height must stay
+   automatic wherever CSS does not set it (the footer logo, for one). */
+img {
+  height: auto;
+}

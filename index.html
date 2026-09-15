@@ -203,7 +203,7 @@ position:relative;
 background:
 linear-gradient(90deg,rgba(16,20,19,.92),rgba(16,20,19,.58),rgba(16,20,19,.16)),
 linear-gradient(0deg,rgba(16,20,19,1),rgba(16,20,19,0) 34%),
-url("assets/equipment/wolf-creek-hero-excavator.jpg");
+url("assets/equipment/wolf-creek-hero-excavator-bg.jpg");
 background-size:cover;
 background-position:58% center;
 padding:155px 0 72px;
@@ -467,7 +467,7 @@ border-radius:22px;
 box-shadow:var(--shadow);
 }
 
-.project-grid img:first-child{
+.project-grid > picture:first-child img{
 grid-row:span 2;
 height:518px;
 }
@@ -561,7 +561,7 @@ box-shadow:var(--shadow);
 .final-cta{
 background:
 linear-gradient(rgba(21,29,25,.62),rgba(21,29,25,.76)),
-url("assets/equipment/wolf-creek-dozer-2.jpg");
+url("assets/equipment/wolf-creek-dozer-2-bg.jpg");
 background-size:cover;
 background-position:center;
 text-align:center;
@@ -801,7 +801,7 @@ height:310px;
 }
 
 .project-grid img,
-.project-grid img:first-child{
+.project-grid > picture:first-child img{
 height:280px;
 grid-row:auto;
 }
@@ -909,7 +909,7 @@ display:none;
    "image": "https://wolfcreeklands.com/assets/og/wolf-creek-og.jpg",
    "logo": {
     "@type": "ImageObject",
-    "url": "https://wolfcreeklands.com/assets/logo/wolf-creek-logo.png"
+    "url": "https://wolfcreeklands.com/assets/logo/wolf-creek-logo-schema.png"
    },
    "description": "Land clearing, road building, drainage, house pads, and pond work across East Central Alabama. Free estimates. Call or text 334-207-3331.",
    "address": {
@@ -1144,7 +1144,10 @@ display:none;
 <div class="container nav">
 
 <a href="index.html" class="logo">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-200.webp 200w, assets/logo/wolf-creek-logo-white-400.webp 400w" sizes="120px">
+<img src="assets/logo/wolf-creek-logo-white-400.png" srcset="assets/logo/wolf-creek-logo-white-200.png 200w, assets/logo/wolf-creek-logo-white-400.png 400w" sizes="120px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </a>
 
 <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -1209,14 +1212,14 @@ Wolf Creek Farms helps landowners clear, shape, drain, build, and improve proper
 <input type="email" name="email" placeholder="Email">
 
 <div class="form-row">
-<select name="preferred-contact">
+<select name="preferred-contact" aria-label="Preferred contact method">
 <option value="">Preferred Contact</option>
 <option>Call</option>
 <option>Text</option>
 <option>Email</option>
 </select>
 
-<select name="service-needed" required>
+<select name="service-needed" required aria-label="Service needed">
 <option value="">Service Needed</option>
 <option>Land Clearing</option>
 <option>Land Prep / Land Preparation</option>
@@ -1275,7 +1278,10 @@ Wolf Creek Farms focuses on land work that improves access, function, drainage, 
 
 <div class="feature">
 <div class="feature-img">
-<img src="assets/equipment/wolf-creek-dozer.jpg" alt="Wolf Creek Farms dozer clearing land">
+<picture>
+<source type="image/webp" srcset="assets/equipment/wolf-creek-dozer-480.webp 480w, assets/equipment/wolf-creek-dozer-900.webp 900w, assets/equipment/wolf-creek-dozer-1600.webp 1600w" sizes="(max-width:980px) 92vw, 50vw">
+<img src="assets/equipment/wolf-creek-dozer-900.jpg" srcset="assets/equipment/wolf-creek-dozer-480.jpg 480w, assets/equipment/wolf-creek-dozer-900.jpg 900w, assets/equipment/wolf-creek-dozer-1600.jpg 1600w" sizes="(max-width:980px) 92vw, 50vw" width="2000" height="1415" alt="Wolf Creek Farms dozer clearing land" loading="lazy" decoding="async">
+</picture>
 </div>
 
 <div class="feature-copy">
@@ -1296,7 +1302,10 @@ We clear brush, small trees, overgrowth, and rough areas so your property can be
 
 <div class="feature">
 <div class="feature-img">
-<img src="assets/equipment/wolf-creek-dump-truck.jpg" alt="Wolf Creek Farms dump truck for clay gravel and road work">
+<picture>
+<source type="image/webp" srcset="assets/equipment/wolf-creek-dump-truck-480.webp 480w, assets/equipment/wolf-creek-dump-truck-900.webp 900w" sizes="(max-width:980px) 92vw, 50vw">
+<img src="assets/equipment/wolf-creek-dump-truck-900.jpg" srcset="assets/equipment/wolf-creek-dump-truck-480.jpg 480w, assets/equipment/wolf-creek-dump-truck-900.jpg 900w" sizes="(max-width:980px) 92vw, 50vw" width="1580" height="2000" alt="Wolf Creek Farms dump truck for clay gravel and road work" loading="lazy" decoding="async">
+</picture>
 </div>
 
 <div class="feature-copy">
@@ -1317,7 +1326,10 @@ From farm roads and hunting roads to driveways and clay gravel work, we help mak
 
 <div class="feature">
 <div class="feature-img">
-<img src="assets/projects/project-9.jpg" alt="Wolf Creek Farms land development aerial style project view" loading="lazy">
+<picture>
+<source type="image/webp" srcset="assets/projects/project-9-480.webp 480w, assets/projects/project-9-900.webp 900w, assets/projects/project-9-1600.webp 1600w" sizes="(max-width:980px) 92vw, 50vw">
+<img src="assets/projects/project-9-900.jpg" srcset="assets/projects/project-9-480.jpg 480w, assets/projects/project-9-900.jpg 900w, assets/projects/project-9-1600.jpg 1600w" sizes="(max-width:980px) 92vw, 50vw" width="2000" height="1437" alt="Wolf Creek Farms land development aerial style project view" loading="lazy" decoding="async">
+</picture>
 </div>
 
 <div class="feature-copy">
@@ -1387,12 +1399,30 @@ Project photos do the selling. This section gives customers a quick look at real
 </div>
 
 <div class="project-grid">
-<img src="assets/projects/project-2.jpg" alt="Wolf Creek Farms land clearing project" loading="lazy">
-<img src="assets/projects/project-3.jpg" alt="Wolf Creek Farms completed land project" loading="lazy">
-<img src="assets/projects/project-4.jpg" alt="Wolf Creek Farms equipment project" loading="lazy">
-<img src="assets/projects/project-5.jpg" alt="Wolf Creek Farms road and land project" loading="lazy">
-<img src="assets/projects/project-6.jpg" alt="Wolf Creek Farms rural property project" loading="lazy">
-<img src="assets/projects/project-12.jpg" alt="Wolf Creek Farms site development and grading project" loading="lazy">
+<picture>
+<source type="image/webp" srcset="assets/projects/project-2-480.webp 480w, assets/projects/project-2-900.webp 900w, assets/projects/project-2-1600.webp 1600w" sizes="(max-width:760px) 92vw, 42vw">
+<img src="assets/projects/project-2-900.jpg" srcset="assets/projects/project-2-480.jpg 480w, assets/projects/project-2-900.jpg 900w, assets/projects/project-2-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 42vw" width="2000" height="1466" alt="Wolf Creek Farms land clearing project" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-3-480.webp 480w, assets/projects/project-3-900.webp 900w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-3-900.jpg" srcset="assets/projects/project-3-480.jpg 480w, assets/projects/project-3-900.jpg 900w" sizes="(max-width:760px) 92vw, 28vw" width="1232" height="2000" alt="Wolf Creek Farms completed land project" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-4-480.webp 480w, assets/projects/project-4-900.webp 900w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-4-900.jpg" srcset="assets/projects/project-4-480.jpg 480w, assets/projects/project-4-900.jpg 900w" sizes="(max-width:760px) 92vw, 28vw" width="1580" height="2000" alt="Wolf Creek Farms equipment project" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-5-480.webp 480w, assets/projects/project-5-900.webp 900w, assets/projects/project-5-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-5-900.jpg" srcset="assets/projects/project-5-480.jpg 480w, assets/projects/project-5-900.jpg 900w, assets/projects/project-5-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1021" alt="Wolf Creek Farms road and land project" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-6-480.webp 480w, assets/projects/project-6-900.webp 900w, assets/projects/project-6-1600.webp 1600w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-6-900.jpg" srcset="assets/projects/project-6-480.jpg 480w, assets/projects/project-6-900.jpg 900w, assets/projects/project-6-1600.jpg 1600w" sizes="(max-width:760px) 92vw, 28vw" width="2000" height="1442" alt="Wolf Creek Farms rural property project" loading="lazy" decoding="async">
+</picture>
+<picture>
+<source type="image/webp" srcset="assets/projects/project-12-480.webp 480w, assets/projects/project-12-900.webp 900w" sizes="(max-width:760px) 92vw, 28vw">
+<img src="assets/projects/project-12-900.jpg" srcset="assets/projects/project-12-480.jpg 480w, assets/projects/project-12-900.jpg 900w" sizes="(max-width:760px) 92vw, 28vw" width="1092" height="2000" alt="Wolf Creek Farms site development and grading project" loading="lazy" decoding="async">
+</picture>
 </div>
 
 <div style="margin-top:30px;">
@@ -1474,7 +1504,10 @@ Serving homeowners, farms, hunting properties, rural landowners, and commercial 
 </div>
 
 <div class="area-img">
-<img src="assets/equipment/wolf-creek-dozer-2.jpg" alt="Wolf Creek Farms dozer work in East Central Alabama">
+<picture>
+<source type="image/webp" srcset="assets/equipment/wolf-creek-dozer-2-480.webp 480w, assets/equipment/wolf-creek-dozer-2-900.webp 900w, assets/equipment/wolf-creek-dozer-2-1600.webp 1600w" sizes="(max-width:980px) 92vw, 50vw">
+<img src="assets/equipment/wolf-creek-dozer-2-900.jpg" srcset="assets/equipment/wolf-creek-dozer-2-480.jpg 480w, assets/equipment/wolf-creek-dozer-2-900.jpg 900w, assets/equipment/wolf-creek-dozer-2-1600.jpg 1600w" sizes="(max-width:980px) 92vw, 50vw" width="2000" height="1444" alt="Wolf Creek Farms dozer work in East Central Alabama" loading="lazy" decoding="async">
+</picture>
 </div>
 
 </div>
@@ -1485,7 +1518,10 @@ Serving homeowners, farms, hunting properties, rural landowners, and commercial 
 <div class="container equipment-wrap">
 
 <div class="equipment-img">
-<img src="assets/equipment/wolf-creek-hero-excavator.jpg" alt="Wolf Creek Farms excavator on a land development job in East Central Alabama" loading="lazy">
+<picture>
+<source type="image/webp" srcset="assets/equipment/wolf-creek-hero-excavator-480.webp 480w, assets/equipment/wolf-creek-hero-excavator-900.webp 900w, assets/equipment/wolf-creek-hero-excavator-1600.webp 1600w" sizes="(max-width:980px) 92vw, 50vw">
+<img src="assets/equipment/wolf-creek-hero-excavator-900.jpg" srcset="assets/equipment/wolf-creek-hero-excavator-480.jpg 480w, assets/equipment/wolf-creek-hero-excavator-900.jpg 900w, assets/equipment/wolf-creek-hero-excavator-1600.jpg 1600w" sizes="(max-width:980px) 92vw, 50vw" width="2000" height="1333" alt="Wolf Creek Farms excavator on a land development job in East Central Alabama" loading="lazy" decoding="async">
+</picture>
 </div>
 
 <div class="equipment-copy">
@@ -1568,7 +1604,10 @@ Land clearing, land prep, road building, drainage, pond building, demolition, an
 <div class="container">
 
 <div class="footer-logo-box">
-<img src="assets/logo/wolf-creek-logo-white.png" alt="Wolf Creek Farms">
+<picture>
+<source type="image/webp" srcset="assets/logo/wolf-creek-logo-white-400.webp 400w, assets/logo/wolf-creek-logo-white-720.webp 720w" sizes="360px">
+<img src="assets/logo/wolf-creek-logo-white-720.png" srcset="assets/logo/wolf-creek-logo-white-400.png 400w, assets/logo/wolf-creek-logo-white-720.png 720w" sizes="360px" width="1182" height="1042" alt="Wolf Creek Farms" decoding="async">
+</picture>
 </div>
 
 <h3>Wolf Creek Farms</h3>
